@@ -25,7 +25,7 @@ class NavbarFull extends Component {
       render() {
         return (
           <div>
-            <Navbar color="light" light expand="md">
+            <Navbar color="light" light expand="xs">
               <NavbarBrand href="/">Moov'in Lille</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
