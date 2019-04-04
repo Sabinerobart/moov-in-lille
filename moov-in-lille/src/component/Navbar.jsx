@@ -5,8 +5,8 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
-    NavItem,
-    NavLink} from 'reactstrap';
+    NavItem} from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class NavbarFull extends Component {
     constructor(props) {
@@ -31,10 +31,10 @@ class NavbarFull extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="/">Itinerary</NavLink>
+                    <Button outline color="secondary"><i className="fas fa-map-marked-alt"></i></Button>{' '}
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/">Favorites</NavLink>
+                    <Button outline color="secondary"><i className="far fa-heart"></i></Button>{' '}
                   </NavItem>
                 </Nav>
               </Collapse>
