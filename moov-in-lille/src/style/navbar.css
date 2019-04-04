@@ -1,4 +1,4 @@
-/* VERSION MOBILE */
+/* VERSION DESKTOP */
 
 
 .logo {
@@ -16,21 +16,18 @@
     padding: 10px;
     height: 7vh;
 }
-.boutton2 {
-    padding: 10px;
-    height: 7vh;
-}
 
 
 
-/* VERSION mobile */
+/* VERSION MOBILE */
 @media (max-width: 480px) {
     * {
         font-size: 2.2vh;
     }
 
     .logo {
-        display: none;
+        width: 25vw;
+        height: auto;
     }
     
     .navbarFull {
@@ -38,16 +35,8 @@
     }
     
     .boutton1 {
-        position: absolute;
-        left: 10vw;
-        top: 1.5vh;
-        padding: 5px;
-    }
-
-    .boutton2 {
-        position: absolute;
-        right: 10vw;
-        top: 1.5vh;
-        padding: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 10vh;
     }
 }

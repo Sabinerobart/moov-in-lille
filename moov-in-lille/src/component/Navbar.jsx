@@ -34,7 +34,7 @@ class NavbarFull extends Component {
                             <NavItem className="boutton1">
                                 <Button outline color="danger"><i className="fas fa-map-marked-alt"><br />Itinerary</i></Button>
                             </NavItem>
-                            <NavItem className="boutton2">
+                            <NavItem className="boutton1">
                                 <Button outline color="danger"><i className="fas fa-heart"><br />Favorites</i></Button>
                             </NavItem>
                         </Nav>
