@@ -10,22 +10,16 @@ class Footer extends Component {
 
 <ButtonGroup className="footerBarre">
 
-  <Button
-    className="persoBtn"
-  >
+  <Button>
   Mentions légales 
   </Button>
 
   
-  <Button
-    className="persoBtn"
-  >
+  <Button>
   Réseaux sociaux
   </Button>
 
-  <Button
-    className="persoBtn"
-  >
+  <Button>
   Contact
   </Button>
 
