@@ -4,28 +4,28 @@ import "../style/footer.css";
 
 class Footer extends Component {
     render() {
-  return ( 
+      return ( 
 
-<div>
+        <div>
 
-<ButtonGroup className="footerBarre">
+          <ButtonGroup className="footer">
 
-  <Button>
-  Mentions légales 
-  </Button>
+            <Button>
+              Mentions légales 
+            </Button>
 
-  
-  <Button>
-  Réseaux sociaux
-  </Button>
 
-  <Button>
-  Contact
-  </Button>
+            <Button>
+              Réseaux sociaux
+            </Button>
 
-</ButtonGroup>
+            <Button>
+              Contact
+            </Button>
 
-</div>
+          </ButtonGroup>
+
+        </div>
   );}
 }
 
