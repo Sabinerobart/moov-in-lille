@@ -16,11 +16,7 @@ class Footer extends Component {
 
 
             <Button>
-              Réseaux sociaux
-            </Button>
-
-            <Button>
-              Contact
+              Carte du site
             </Button>
 
           </ButtonGroup>
