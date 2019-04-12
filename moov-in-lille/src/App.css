@@ -40,3 +40,7 @@ i:hover, i:active {
     color: var(--main-color);
     cursor: pointer;
 }
+
+.leaflet-touch .leaflet-bar a {
+    color : transparent;
+  }
