@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import MapboxLayer from "./MapboxLayer";
 
+const MAPBOX_ACCESS_TOKEN =
+  "pk.eyJ1IjoiZnJlZDc4OTYiLCJhIjoiY2p1YmJ2dnM5MDRkYTN6cW1nZHJoc3pudiJ9.UdKtx13HOR9-Uoej4C5cyw";
 const osmTiles = "http://{s}.tile.osm.org/{z}/{x}/{y}.png";
 const osmAttr =
   '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
@@ -36,6 +39,10 @@ export default class MyMap extends Component {
           center={mapCenter}
           zoom={zoomLevel}
         >
+        <MapboxLayer
+            accessToken={MAPBOX_ACCESS_TOKEN}
+             style="mapbox://styles/fred7896/cjubc0ed70c8z1fphm80anfgp" 
+             />
           <TileLayer attribution={osmAttr} url={osmTiles} />
           <Marker position={mapCenter}>
             <Popup>
