@@ -17,7 +17,7 @@ class DataContainer extends React.Component {
       )
       .then(res => {
         this.setState({
-          stations: res.data
+          stations: res.data.records
         });
       });
   }
