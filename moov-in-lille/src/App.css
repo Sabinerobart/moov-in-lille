@@ -40,3 +40,7 @@ i:hover, i:active {
     color: var(--main-color);
     cursor: pointer;
 }
+
+.logo {
+    height: 5vh;
+}
