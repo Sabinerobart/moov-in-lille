@@ -19,10 +19,15 @@ class DataContainer extends React.Component {
         this.setState({
           stations: res.data
         });
+        console.log(res.data);
       });
   }
   render() {
-    return <MyMap />;
+    return (
+      <React.Fragment>
+        <MyMap stations={this.state.stations} />;
+      </React.Fragment>
+    );
   }
 }
 
