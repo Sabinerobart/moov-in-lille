@@ -19,7 +19,6 @@ class DataContainer extends React.Component {
         this.setState({
           stations: res.data
         });
-        console.log(res.data);
       });
   }
   render() {
