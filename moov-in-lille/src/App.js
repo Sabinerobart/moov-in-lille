@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavbarFull from './component/NavbarFull';
+import NavbarFull from "./component/NavbarFull";
 import MyMap from "./component/MyMap";
+import DataContainer from "./component/DataContainer";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <NavbarFull />
         <MyMap />
+        <DataContainer />
       </div>
     );
   }
