@@ -43,19 +43,19 @@ export default class MyMap extends Component {
             accessToken={MAPBOX_ACCESS_TOKEN}
              style="mapbox://styles/fred7896/cjubc0ed70c8z1fphm80anfgp" 
              />
-          <TileLayer attribution={osmAttr} url={osmTiles} />
-          <Marker position={mapCenter}>
-            <Popup>
-              <div className="row popup-container">
-                <div className="col-6 text-center vertical-separation">
-                  <img
-                    src={require("../pictures/bike-icon.png")}
-                    alt="bike"
-                    width="33px"
-                    className="py-1"
-                  />
-                  <p className="text-center count-text">11</p>
-                </div>
+        <TileLayer attribution={osmAttr} url={osmTiles} />
+        <Marker position={mapCenter}>
+          <Popup>
+            <div className="row popup-container">
+              <div className="col-6 text-center vertical-separation">
+                <img
+                  src={require("../pictures/bike-icon.png")}
+                  alt="bike"
+                  width="33px"
+                  className="py-1"
+                />
+                <p className="text-center count-text">11</p>
+              </div>
                 <div className="col-6 text-center">
                   <img
                     src={require("../pictures/blue-parking.png")}
@@ -78,11 +78,11 @@ export default class MyMap extends Component {
                 >
                   Avis
                 </a>
-              </div>
-            </Popup>
-          </Marker>
-        </Map>
-      </div>
+            </div>
+          </Popup>
+        </Marker>
+      </Map>
+    </div>
     );
   }
 }
