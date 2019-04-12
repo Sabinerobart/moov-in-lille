@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import MyMap from "./MyMap";
 
 class DataContainer extends React.Component {
   constructor(props) {
@@ -20,4 +21,9 @@ class DataContainer extends React.Component {
         });
       });
   }
+  render() {
+    return <MyMap />;
+  }
 }
+
+export default DataContainer;
