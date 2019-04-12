@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import RangeSlider from "./RangeSlider";
 
 const osmTiles = "http://{s}.tile.osm.org/{z}/{x}/{y}.png";
 const osmAttr =
@@ -62,6 +63,7 @@ export default class MyMap extends Component {
                       </p>
                       <p className="text-center">velos disponibles</p>
                     </div>
+                    <RangeSlider stationSlider={station} />
                   </div>
                 </Popup>
               </Marker>
