@@ -37,43 +37,36 @@ export default class MyMap extends Component {
           zoom={zoomLevel}
         >
           <TileLayer attribution={osmAttr} url={osmTiles} />
-          <Marker position={mapCenter}>
-            <Popup>
-              <div className="row popup-container">
-                <div className="col-6 text-center vertical-separation">
-                  <img
-                    src={require("../pictures/bike-icon.png")}
-                    alt="bike"
-                    width="33px"
-                    className="py-1"
-                  />
-                  <p className="text-center count-text">11</p>
-                </div>
-                <div className="col-6 text-center">
-                  <img
-                    src={require("../pictures/blue-parking.png")}
-                    alt="available spots"
-                    width="40px"
-                  />
-                  <p className="text-center count-text">3</p>
-                </div>
-                <div className="col-9 my-2">
-                  Rue Edouard Delesalle
-                  <br />
-                  59000 Lille
-                </div>
-                <div className="col-3 my-2 py-2">
-                  <i class="fas fa-heart" />
-                </div>
-                <a
-                  href="https://opendata.lillemetropole.fr/explore/dataset/vlille-realtime/information/?flg=fr"
-                  className="mx-3"
-                >
-                  Avis
-                </a>
-              </div>
-            </Popup>
-          </Marker>
+          {this.props.stations.map((station, i) => {
+            return (
+              <Marker position={station.fields.geo} key={i}>
+                <Popup>
+                  <div className="row popup-container justify-content-center">
+                    <div className="col-12 text-center">
+                      <h5>
+                        {station.fields.nom.charAt(0).toUpperCase() +
+                          station.fields.nom.slice(1).toLowerCase()}
+                      </h5>
+                    </div>
+                    <div className="col-12 text-center">
+                      <img
+                        src={require("../pictures/bike-icon.png")}
+                        alt="bike"
+                        width="33px"
+                        className="py-1"
+                      />
+                    </div>
+                    <div className="col-12">
+                      <p className="text-center count-text">
+                        {station.fields.nbvelosdispo}
+                      </p>
+                      <p className="text-center">velos disponibles</p>
+                    </div>
+                  </div>
+                </Popup>
+              </Marker>
+            );
+          })}
         </Map>
       </div>
     );
