@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import NavbarFull from "./component/NavbarFull";
 import DataContainer from "./component/DataContainer";
 
