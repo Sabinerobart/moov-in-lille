@@ -24,7 +24,7 @@ class DataContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <MyMap stations={this.state.stations} />;
+        <MyMap stations={this.state.stations} />
       </React.Fragment>
     );
   }
