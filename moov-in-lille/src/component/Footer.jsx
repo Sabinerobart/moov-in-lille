@@ -7,20 +7,17 @@ class Footer extends Component {
       return ( 
 
         <div>
-
           <ButtonGroup className="footer">
 
             <Button>
               Mentions légales 
             </Button>
 
-
             <Button>
               Carte du site
             </Button>
 
           </ButtonGroup>
-
         </div>
   );}
 }
