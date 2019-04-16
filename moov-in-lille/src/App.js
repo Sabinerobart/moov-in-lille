@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
+import NavbarFull from "./component/NavbarFull";
+import DataContainer from "./component/DataContainer";
 import Footer from './component/footer';
-import NavbarFull from './component/NavbarFull';
-import MyMap from "./component/MyMap";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <NavbarFull />
-        <MyMap />
+        <DataContainer />
         <Footer />
       </div>
     );
