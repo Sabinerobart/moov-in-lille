@@ -7,6 +7,8 @@
     "bootstrap": "^4.3.1",
     "leaflet": "^1.4.0",
     "node-sass": "^4.11.0",
+    "mapbox-gl": "^0.53.1",
+    "mapbox-gl-leaflet": "0.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-leaflet": "^2.2.1",
