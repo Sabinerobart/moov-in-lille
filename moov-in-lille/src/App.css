@@ -1,0 +1,46 @@
+:root {
+    --main-color: #B71332;
+}
+
+.leaflet-container {
+    height: 100vh;
+}
+
+.leaflet-popup {
+    width: 15rem;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 5px;
+}
+
+.vertical-separation {
+    border-right: 2px solid var(--main-color);
+}
+
+.count-text {
+    font-size: 1.3rem;
+    line-height: .5;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: rgba(183, 19, 49, 0.486);
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: var(--main-color);
+}
+
+i {
+    color: #ccc;
+    font-size: 1.3rem;
+}
+
+i:hover, i:active {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.logo {
+    height: 5vh;
+}
