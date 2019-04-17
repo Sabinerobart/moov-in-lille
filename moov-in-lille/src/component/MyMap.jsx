@@ -8,37 +8,22 @@ const MAPBOX_ACCESS_TOKEN =
 const osmTiles = "http://{s}.tile.osm.org/{z}/{x}/{y}.png";
 const osmAttr =
   '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
-const mapCenter = [50.633333, 3.066667];
-
-const zoomLevel = 14;
 
 export default class MyMap extends Component {
   constructor(props) {
     super(props);
-    this.state = { currentZoomLevel: zoomLevel };
-  }
-
-  componentDidMount() {
-    const leafletMap = this.leafletMap.leafletElement;
-    leafletMap.on("zoomend", () => {
-      const updatedZoomLevel = leafletMap.getZoom();
-      this.handleZoomLevelChange(updatedZoomLevel);
-    });
-  }
-
-  handleZoomLevelChange(newZoomLevel) {
-    this.setState({ currentZoomLevel: newZoomLevel });
+    this.state = { 
+      center: [50.633333, 3.066667],
+      zoomLevel: 15
+    };
   }
 
   render() {
     return (
       <div>
         <Map
-          ref={m => {
-            this.leafletMap = m;
-          }}
-          center={mapCenter}
-          zoom={zoomLevel}
+          center={this.state.center}
+          zoom={this.state.zoomLevel}
         >
           <MapboxLayer
             accessToken={MAPBOX_ACCESS_TOKEN}
