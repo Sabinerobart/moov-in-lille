@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import RangeSlider from "./RangeSlider";
 
-//OSM Default MapTiles - Keep for feature - custom thema by user connected
-const osmTiles = "http://{s}.tile.osm.org/{z}/{x}/{y}.png";
-const osmAttr =
-  '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 //Mapbox MapTiles - this constant could be pass in state for feature custom thema.
 const mapboxTiles = "https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZnJlZDc4OTYiLCJhIjoiY2p1YmJ2dnM5MDRkYTN6cW1nZHJoc3pudiJ9.UdKtx13HOR9-Uoej4C5cyw"
 const mapboxAttr = '&copy; <a href="https://www.mapbox.com/feedback/">Mapbox</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
