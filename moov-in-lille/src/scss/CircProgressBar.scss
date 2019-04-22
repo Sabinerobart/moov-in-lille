@@ -1,0 +1,30 @@
+#output {
+  margin: 0 0.7rem;
+}
+
+.number-size {
+  font-size: 1.2rem;
+}
+
+svg text {
+  font-size: 17px;
+  transform: translateX(-12px);
+}
+
+img {
+  position: absolute;
+  top: 59%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+
+path:nth-child(2) {
+  stroke-dasharray: 0;
+  animation: progress 4s;
+}
+
+@keyframes progress {
+  to {
+    stroke-dasharray: 1000;
+  }
+}
