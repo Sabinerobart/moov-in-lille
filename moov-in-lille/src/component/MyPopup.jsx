@@ -1,5 +1,6 @@
 import React from "react";
 import { Popup } from "react-leaflet";
+import CircProgressBar from "./CircProgressBar";
 
 export default class MyPopup extends React.Component {
   render() {
@@ -13,6 +14,9 @@ export default class MyPopup extends React.Component {
           <div className="col-12 text-center">
             <h5 className="m-0">{title}</h5>
             <div className="separation mx-auto" />
+          </div>
+          <div className="my-3">
+            <CircProgressBar stationSlider={this.props.station} />
           </div>
         </div>
       </Popup>
