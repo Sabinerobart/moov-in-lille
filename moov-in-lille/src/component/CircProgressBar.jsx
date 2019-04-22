@@ -1,6 +1,6 @@
 import React from "react";
 import { CircleSlider } from "react-circle-slider";
-import "../scss/CircProgressBar.scss";
+import "../style/CircProgressBar.scss";
 import { Row, Col } from "reactstrap";
 
 class CircProgressBar extends React.Component {
