@@ -1,13 +1,13 @@
 import React from "react";
 import { CircleSlider } from "react-circle-slider";
 import "../scss/CircProgressBar.scss";
+import { Row, Col } from "reactstrap";
 
 class CircProgressBar extends React.Component {
   render() {
     const nbBikes = this.props.stationSlider.fields.nbvelosdispo;
-    const max =
-      this.props.stationSlider.fields.nbvelosdispo +
-      this.props.stationSlider.fields.nbplacesdispo;
+    const nbParking = this.props.stationSlider.fields.nbplacesdispo;
+    const max = nbBikes + nbParking;
     let percentage = (nbBikes * 100) / max;
     const disable = nbBikes === 0 ? "#ccc" : "#b71332";
     let rangeColor;
@@ -23,7 +23,7 @@ class CircProgressBar extends React.Component {
         rangeColor = "#ff7300";
         break;
       case percentage > 50 && percentage <= 75:
-        rangeColor = "#F0F282";
+        rangeColor = "#EFF24F";
         break;
       case percentage > 75 && percentage <= 100:
         rangeColor = "#1ea500";
@@ -33,8 +33,12 @@ class CircProgressBar extends React.Component {
         break;
     }
 
+    const zeroBikes = nbBikes === 0 ? "zero text-right p-1" : "text-right p-1";
+
+    const zeroParking =
+      nbParking === 0 ? "zero text-right p-1" : "text-right p-1";
     return (
-      <div>
+      <Row>
         <CircleSlider
           value={nbBikes}
           max={max}
@@ -43,15 +47,33 @@ class CircProgressBar extends React.Component {
           circleWidth="10"
           knobRadius="0"
           progressColor={rangeColor}
-          showTooltip="true"
           tooltipColor={disable}
         />
-        <img
-          src={require("../pictures/bike-icon.png")}
-          alt="bike"
-          width="18px"
-        />
-      </div>
+        <Row className="popup-info align-items-center p-0 m-0">
+          <Col xs="6" className={zeroBikes}>
+            {nbBikes}
+          </Col>
+          <Col xs="6" className="p-1">
+            <img
+              className="popup-img"
+              src={require("../pictures/bike-icon.png")}
+              alt="bike"
+              width="18px"
+            />
+          </Col>
+          <Col xs="6" className={zeroParking}>
+            {nbParking}
+          </Col>
+          <Col xs="6" className="p-1">
+            <img
+              className="popup-img"
+              src={require("../pictures/parking-icon.png")}
+              alt="parking"
+              width="22px"
+            />
+          </Col>
+        </Row>
+      </Row>
     );
   }
 }
