@@ -1,0 +1,29 @@
+svg {
+    overflow: hidden;
+  }
+  
+  .popup-info {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    color: #b71332;
+    font-weight: 600;
+    font-family: ubuntu;
+  }
+  
+  .zero {
+    color: #a5a5a5;
+  }
+  
+  path:nth-child(2) {
+    stroke-dasharray: 0;
+    animation: progress 4s;
+  }
+  
+  @keyframes progress {
+    to {
+      stroke-dasharray: 1500;
+    }
+  }
