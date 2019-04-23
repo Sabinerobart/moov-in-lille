@@ -3,12 +3,18 @@
 }
 
 @font-face {
-  font-family: "brush font";
+  font-family: "brush font" ;
   src: url("../src/Fonts/Thick-Brush-Demo.otf");
+}
+
+@font-face {
+  font-family : 'Quicksand';
+  @import url('https://fonts.googleapis.com/css?family=Quicksand');
 }
 
 * {
   font-size: calc(0.65rem + 0.3vw);
+  font-family : 'Quicksand'
 }
 
 h5::first-letter {
@@ -73,7 +79,8 @@ i {
 }
 
 .logo {
-  height: 5vh;
+  height: 7vh;
+  margin-left : 1.5rem;
 }
 
 .favorite-icon {
@@ -90,4 +97,16 @@ i {
 
 .button:active {
   transform: scale(0.99);
+}
+
+h1.accroche {
+  font-size : 1.3rem;
+  margin-bottom : -0.8rem;
+  margin-left : 2rem;
+}
+
+h1::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
 }
