@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Marker } from "react-leaflet";
+import Control from "react-leaflet-control";
 import "../App.scss";
 import MyPopup from "./MyPopup";
 
@@ -20,10 +21,30 @@ export default class MyMap extends Component {
     };
   }
 
+  handleGeoloc() {
+    navigator.geolocation.getCurrentPosition(position => {
+      this.setState({
+        location: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+      });
+    });
+  }
+
   render() {
     return (
       <Map center={this.state.location} zoom={this.state.zoomLevel}>
         <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
+        <Control position="topleft">
+          <button
+            onClick={() => this.handleGeoloc()}
+            className="geoloc-btn"
+            title="Show me where I am !"
+          >
+            <i className="fas fa-crosshairs" />
+          </button>
+        </Control>
         {this.props.stations.map((station, i) => {
           return (
             <Marker position={station.fields.geo} key={i}>
