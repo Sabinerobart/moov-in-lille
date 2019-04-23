@@ -44,7 +44,6 @@ class NavbarFull extends React.Component {
                 <NavLink href="#">Favoris</NavLink>
               </NavItem>
             </Nav>
-            
           </Collapse>
         </Navbar>
       </React.Fragment>
