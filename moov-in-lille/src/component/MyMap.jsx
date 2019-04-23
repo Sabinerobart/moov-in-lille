@@ -27,7 +27,8 @@ export default class MyMap extends Component {
         location: {
           lat: position.coords.latitude,
           lng: position.coords.longitude
-        }
+        },
+        zoomLevel: 15
       });
     });
   }
