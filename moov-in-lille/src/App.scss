@@ -7,8 +7,14 @@
   src: url("../src/Fonts/Thick-Brush-Demo.otf");
 }
 
+@font-face {
+  font-family: "Quicksand";
+  @import url("https://fonts.googleapis.com/css?family=Quicksand");
+}
+
 * {
   font-size: calc(0.65rem + 0.3vw);
+  font-family: "Quicksand";
 }
 
 h5::first-letter {
@@ -22,6 +28,7 @@ h5::first-letter {
 }
 
 .leaflet-popup-content-wrapper {
+  width: 18rem;
   border-radius: 0;
   border-top: 8px solid var(--main-color);
   padding: 0.3rem;
@@ -73,7 +80,8 @@ i {
 }
 
 .logo {
-  height: 5vh;
+  height: 7vh;
+  margin-left: 1.5rem;
 }
 
 .favorite-icon {
@@ -107,4 +115,16 @@ i {
     padding: 0;
     margin: 0;
   }
+}
+
+h1.accroche {
+  font-size: 1rem;
+  margin-bottom: -0.8rem;
+  margin-left: 2rem;
+}
+
+h1::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
 }
