@@ -8,14 +8,19 @@ const MAPBOX_ACCESS_TOKEN =
 const osmTiles = "http://{s}.tile.osm.org/{z}/{x}/{y}.png";
 const osmAttr =
   '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
-const mapCenter = [50.633333, 3.066667];
 
 const zoomLevel = 14;
 
 export default class MyMap extends Component {
   constructor(props) {
     super(props);
-    this.state = { currentZoomLevel: zoomLevel };
+    this.state = {
+      currentZoomLevel: zoomLevel,
+      location: {
+        lat: 50.633333,
+        lng: 3.066667
+      }
+    };
   }
 
   componentDidMount() {
@@ -23,6 +28,16 @@ export default class MyMap extends Component {
     leafletMap.on("zoomend", () => {
       const updatedZoomLevel = leafletMap.getZoom();
       this.handleZoomLevelChange(updatedZoomLevel);
+    });
+
+    navigator.geolocation.getCurrentPosition(position => {
+      console.log(position);
+      this.setState({
+        location: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+      });
     });
   }
 
@@ -37,13 +52,13 @@ export default class MyMap extends Component {
           ref={m => {
             this.leafletMap = m;
           }}
-          center={mapCenter}
+          center={this.state.location}
           zoom={zoomLevel}
         >
           <MapboxLayer
             accessToken={MAPBOX_ACCESS_TOKEN}
-             style="mapbox://styles/fred7896/cjubc0ed70c8z1fphm80anfgp" 
-             />
+            style="mapbox://styles/fred7896/cjubc0ed70c8z1fphm80anfgp"
+          />
           <TileLayer attribution={osmAttr} url={osmTiles} />
           {this.props.stations.map((station, i) => {
             return (
