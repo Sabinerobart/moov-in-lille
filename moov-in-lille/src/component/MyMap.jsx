@@ -39,7 +39,6 @@ export default class MyMap extends Component {
 
   handleGeoloc() {
     navigator.geolocation.getCurrentPosition(position => {
-      // console.log(position);
       this.setState({
         location: {
           lat: position.coords.latitude,
