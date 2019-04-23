@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import MapboxLayer from "./MapboxLayer";
 import RangeSlider from "./RangeSlider";
+import Control from "react-leaflet-control";
+import "../App.scss";
 
 const MAPBOX_ACCESS_TOKEN =
   "pk.eyJ1IjoiZnJlZDc4OTYiLCJhIjoiY2p1YmJ2dnM5MDRkYTN6cW1nZHJoc3pudiJ9.UdKtx13HOR9-Uoej4C5cyw";
@@ -29,9 +31,15 @@ export default class MyMap extends Component {
       const updatedZoomLevel = leafletMap.getZoom();
       this.handleZoomLevelChange(updatedZoomLevel);
     });
+  }
 
+  handleZoomLevelChange(newZoomLevel) {
+    this.setState({ currentZoomLevel: newZoomLevel });
+  }
+
+  handleGeoloc() {
     navigator.geolocation.getCurrentPosition(position => {
-      console.log(position);
+      // console.log(position);
       this.setState({
         location: {
           lat: position.coords.latitude,
@@ -39,10 +47,6 @@ export default class MyMap extends Component {
         }
       });
     });
-  }
-
-  handleZoomLevelChange(newZoomLevel) {
-    this.setState({ currentZoomLevel: newZoomLevel });
   }
 
   render() {
@@ -60,6 +64,16 @@ export default class MyMap extends Component {
             style="mapbox://styles/fred7896/cjubc0ed70c8z1fphm80anfgp"
           />
           <TileLayer attribution={osmAttr} url={osmTiles} />
+          <Control position="topleft">
+            <button
+              onClick={() => this.handleGeoloc()}
+              className="geoloc-btn"
+              title="Show me where I am !"
+            >
+              <i className="fas fa-crosshairs" />
+            </button>
+          </Control>
+
           {this.props.stations.map((station, i) => {
             return (
               <Marker position={station.fields.geo} key={i}>
