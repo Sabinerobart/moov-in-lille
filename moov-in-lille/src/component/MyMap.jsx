@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Map, TileLayer, Marker } from "react-leaflet";
 import MapboxLayer from "./MapboxLayer";
 import MyPopup from "./MyPopup";
-//import Markers from "./Markers";
 
 const MAPBOX_ACCESS_TOKEN =
   "pk.eyJ1IjoiZnJlZDc4OTYiLCJhIjoiY2p1YmJ2dnM5MDRkYTN6cW1nZHJoc3pudiJ9.UdKtx13HOR9-Uoej4C5cyw";
