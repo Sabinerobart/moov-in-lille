@@ -10,7 +10,7 @@ const osmAttr =
   '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 const mapCenter = [50.633333, 3.066667];
 
-const zoomLevel = 14;
+const zoomLevel = 16;
 
 export default class MyMap extends Component {
   constructor(props) {

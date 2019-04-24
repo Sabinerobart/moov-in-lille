@@ -5,29 +5,29 @@ import MyPopup from './MyPopup';
 
 
 const redStripedMarker = new L.Icon({
-    iconUrl: require('../pictures/indispo.png'),
-    iconRetinaUrl: require('../pictures/indispo.png'),
+    iconUrl: require('../pictures/5.png'),
+    iconRetinaUrl: require('../pictures/5.png'),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const redMarker = new L.Icon({
-    iconUrl: require('../pictures/0-25.png'),
-    iconRetinaUrl: require('../pictures/0-25.png'),
+    iconUrl: require('../pictures/1-25.png'),
+    iconRetinaUrl: require('../pictures/1-25.png'),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const orangeMarker = new L.Icon({
-    iconUrl: require('../pictures/2.png'),
-    iconRetinaUrl: require('../pictures/2.png'),
+    iconUrl: require('../pictures/25-50.png'),
+    iconRetinaUrl: require('../pictures/25-50.png'),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const yellowMarker = new L.Icon({
-    iconUrl: require('../pictures/4.png'),
-    iconRetinaUrl: require('../pictures/4.png'),
+    iconUrl: require('../pictures/50-75.png'),
+    iconRetinaUrl: require('../pictures/50-75.png'),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
@@ -40,16 +40,16 @@ const greenMarker = new L.Icon({
     iconSize: [40, 40] 
 })
 const greyMarker = new L.Icon({
-    iconUrl: require('../pictures/hors-service.png'),
-    iconRetinaUrl: require('../pictures/hors-service.png'),
+    iconUrl: require('../pictures/indispo.png'),
+    iconRetinaUrl: require('../pictures/indispo.png'),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 
 const fullBikeMarker = new L.Icon({
-    iconUrl: require('../pictures/5.png'),
-    iconRetinaUrl: require('../pictures/5.png'),
+    iconUrl: require('../pictures/fullbike.png'),
+    iconRetinaUrl: require('../pictures/fullbike.png'),
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
