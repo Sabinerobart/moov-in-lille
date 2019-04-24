@@ -3,18 +3,18 @@
 }
 
 @font-face {
-  font-family: "brush font" ;
+  font-family: "brush font";
   src: url("../src/Fonts/Thick-Brush-Demo.otf");
 }
 
 @font-face {
-  font-family : 'Quicksand';
-  @import url('https://fonts.googleapis.com/css?family=Quicksand');
+  font-family: "Quicksand";
+  @import url("https://fonts.googleapis.com/css?family=Quicksand");
 }
 
 * {
   font-size: calc(0.65rem + 0.3vw);
-  font-family : 'Quicksand'
+  font-family: "Quicksand";
 }
 
 h5::first-letter {
@@ -81,7 +81,7 @@ i {
 
 .logo {
   height: 7vh;
-  margin-left : 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .favorite-icon {
@@ -100,10 +100,27 @@ i {
   transform: scale(0.99);
 }
 
+.geoloc-btn {
+  background: #fff;
+  border-radius: 3px;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #ccc;
+  line-height: 30px;
+  &:hover {
+    background: #f4f4f4;
+  }
+  i {
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 h1.accroche {
-  font-size : 1.3rem;
-  margin-bottom : -0.8rem;
-  margin-left : 2rem;
+  font-size: 1rem;
+  margin-bottom: -0.8rem;
+  margin-left: 2rem;
 }
 
 h1::first-letter {

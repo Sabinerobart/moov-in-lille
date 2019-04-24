@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Marker } from "react-leaflet";
+import Control from "react-leaflet-control";
+import "../App.scss";
 import MyPopup from "./MyPopup";
 
 const mapboxTiles =
@@ -11,25 +13,47 @@ export default class MyMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      center: [50.633333, 3.066667],
-      zoomLevel: 15
+      zoomLevel: 14,
+      location: {
+        lat: 50.633333,
+        lng: 3.066667
+      }
     };
+  }
+
+  handleGeoloc() {
+    navigator.geolocation.getCurrentPosition(position => {
+      this.setState({
+        location: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        },
+        zoomLevel: 15
+      });
+    });
   }
 
   render() {
     return (
-      <div>
-        <Map center={this.state.center} zoom={this.state.zoomLevel}>
-          <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
-          {this.props.stations.map((station, i) => {
-            return (
-              <Marker position={station.fields.geo} key={i}>
-                <MyPopup station={station} />
-              </Marker>
-            );
-          })}
-        </Map>
-      </div>
+      <Map center={this.state.location} zoom={this.state.zoomLevel}>
+        <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
+        <Control position="topleft">
+          <button
+            onClick={() => this.handleGeoloc()}
+            className="geoloc-btn"
+            title="Show me where I am !"
+          >
+            <i className="fas fa-crosshairs" />
+          </button>
+        </Control>
+        {this.props.stations.map((station, i) => {
+          return (
+            <Marker position={station.fields.geo} key={i}>
+              <MyPopup station={station} />
+            </Marker>
+          );
+        })}
+      </Map>
     );
   }
 }
