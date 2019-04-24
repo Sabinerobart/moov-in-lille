@@ -1,0 +1,165 @@
+:root {
+  --main-color: #b71332;
+}
+
+@font-face {
+  font-family: "brush font";
+  src: url("../src/Fonts/Thick-Brush-Demo.otf");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  @import url("https://fonts.googleapis.com/css?family=Quicksand");
+}
+
+* {
+  font-size: calc(0.65rem + 0.3vw);
+  font-family: "Quicksand";
+}
+
+h5::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
+}
+
+.leaflet-container {
+  height: 83vh;
+}
+
+.leaflet-popup-content-wrapper {
+  width: 18rem;
+  border-radius: 0;
+  border-top: 8px solid var(--main-color);
+  padding: 0.3rem;
+}
+
+.count-text {
+  font-size: 1.9rem;
+  line-height: 0.7;
+  color: var(--main-color);
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: rgba(183, 19, 49, 0.486);
+  top: 5%;
+  right: 3%;
+  font-size: 170%;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content,
+.leaflet-container a.leaflet-popup-close-button,
+.leaflet-popup-tip {
+  animation: fadeInPopup 0.7s ease-out;
+}
+
+@keyframes fadeInPopup {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  20% {
+    opacity: 0;
+    height: 100px;
+  }
+  100% {
+    opacity: 1;
+    height: 250px;
+  }
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: var(--main-color);
+}
+
+i {
+  color: #ccc;
+  font-size: 1.2rem;
+  vertical-align: sub;
+}
+
+.logo {
+  height: 7vh;
+  margin-left: 1.5rem;
+}
+
+.favorite-icon {
+  color: var(--main-color);
+}
+
+.button {
+  background: none;
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin-top: 1vh;
+}
+
+.button:active {
+  transform: scale(0.99);
+}
+
+.geoloc-btn {
+  background: #fff;
+  border-radius: 3px;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #ccc;
+  line-height: 30px;
+  &:hover {
+    background: #f4f4f4;
+  }
+  i {
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+h1.accroche {
+  font-size: 1rem;
+  //margin-bottom: -0.8rem;
+  margin-left: 2rem;
+}
+
+h1::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
+}
+
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+  height : 12vh;
+ border-bottom:2px solid rgb(183, 19, 49);
+}
+
+div.footer.btn-group {
+  height: 5vh;
+  position: fixed;
+  bottom:0px;
+}
+
+body { 
+  height : 100vh;
+}
+
+.iconeiti{
+  width:3vw;
+  height:3vh;
+}
+
+.iconefav{
+  width:3vw;
+  height:3vh;
+}
+
+.iconNav{
+margin-right:5em;
+font-family:Quicksand;
+font-size:40%;
+text-align:center;
+padding:5px;
+border:1px solid rgb(224, 224, 224);
+border-radius:5%;
+}
