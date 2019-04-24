@@ -9,11 +9,8 @@ import {
   NavLink
 } from "reactstrap";
 import logo from "../img/logo.png";
-<<<<<<< HEAD
 import itineraire from "../pictures/icone-itineraire.png";
 import favoris from "../pictures/icone-favoris.png";
-=======
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
 
 class NavbarFull extends React.Component {
   constructor(props) {
@@ -42,7 +39,6 @@ class NavbarFull extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-<<<<<<< HEAD
               <NavItem className="iconNav">
                 <NavLink href="#"><img src={itineraire} alt="Itinéraire" className="iconeiti"/><br/>
                   Itinéraire
@@ -52,13 +48,6 @@ class NavbarFull extends React.Component {
               <NavItem  className="iconNav">
                 <NavLink href="#"><img src={favoris} alt="Favoris" className="iconefav"/><br/>
                 Favoris</NavLink>
-=======
-              <NavItem>
-                <NavLink href="#">Itinéraire</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Favoris</NavLink>
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
               </NavItem>
             </Nav>
           </Collapse>
