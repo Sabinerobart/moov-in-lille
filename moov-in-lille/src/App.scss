@@ -24,7 +24,7 @@ h5::first-letter {
 }
 
 .leaflet-container {
-  height: 100vh;
+  height: 80vh;
 }
 
 .leaflet-popup-content-wrapper {
@@ -110,4 +110,17 @@ h1::first-letter {
   color: var(--main-color);
   font-family: "brush font", cursive;
   font-size: 180%;
+}
+
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+  height : 15vh;
+}
+
+div.footer.btn-group {
+  height: 5vh;
+  position : fixed;
+}
+
+body { 
+  height : 95vh;
 }
