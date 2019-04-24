@@ -24,7 +24,7 @@ h5::first-letter {
 }
 
 .leaflet-container {
-  height: 80vh;
+  height: 83vh;
 }
 
 .leaflet-popup-content-wrapper {
@@ -136,11 +136,12 @@ nav.navbar.navbar-expand-md.navbar-light.bg-light {
 
 div.footer.btn-group {
   height: 5vh;
-  position : fixed;
+  position: fixed;
+  bottom:0px;
 }
 
 body { 
-  height : 95vh;
+  height : 100vh;
 }
 
 .iconeiti{
