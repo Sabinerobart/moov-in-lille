@@ -32,6 +32,7 @@ class NavbarFull extends React.Component {
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">
             <img className="logo" src={logo} alt="logo" />
+            <h1 className='accroche'> Trouvez votre V'Lille en 1 clic !</h1>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

@@ -7,8 +7,14 @@
   src: url("../src/Fonts/Thick-Brush-Demo.otf");
 }
 
+@font-face {
+  font-family: "Quicksand";
+  @import url("https://fonts.googleapis.com/css?family=Quicksand");
+}
+
 * {
   font-size: calc(0.65rem + 0.3vw);
+  font-family: "Quicksand";
 }
 
 h5::first-letter {
@@ -18,10 +24,11 @@ h5::first-letter {
 }
 
 .leaflet-container {
-  height: 100vh;
+  height: 80vh;
 }
 
 .leaflet-popup-content-wrapper {
+  width: 18rem;
   border-radius: 0;
   border-top: 8px solid var(--main-color);
   padding: 0.3rem;
@@ -73,7 +80,8 @@ i {
 }
 
 .logo {
-  height: 5vh;
+  height: 7vh;
+  margin-left: 1.5rem;
 }
 
 .favorite-icon {
@@ -90,4 +98,46 @@ i {
 
 .button:active {
   transform: scale(0.99);
+}
+
+.geoloc-btn {
+  background: #fff;
+  border-radius: 3px;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #ccc;
+  line-height: 30px;
+  &:hover {
+    background: #f4f4f4;
+  }
+  i {
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+h1.accroche {
+  font-size: 1rem;
+  margin-bottom: -0.8rem;
+  margin-left: 2rem;
+}
+
+h1::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
+}
+
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+  height : 15vh;
+}
+
+div.footer.btn-group {
+  height: 5vh;
+  position : fixed;
+}
+
+body { 
+  height : 95vh;
 }
