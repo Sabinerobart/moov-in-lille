@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import "./App.css";
-import NavbarFull from './component/NavbarFull';
-import MyMap from "./component/MyMap";
+import "./App.scss";
+import NavbarFull from "./component/NavbarFull";
+import DataContainer from "./component/DataContainer";
+import Footer from './component/Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <NavbarFull />
-        <MyMap />
+        <DataContainer />
+        <Footer />
       </div>
     );
   }

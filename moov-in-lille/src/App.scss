@@ -24,7 +24,11 @@ h5::first-letter {
 }
 
 .leaflet-container {
+<<<<<<< HEAD
   height: 83vh;
+=======
+  height: 80vh;
+>>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
 }
 
 .leaflet-popup-content-wrapper {
@@ -119,7 +123,11 @@ i {
 
 h1.accroche {
   font-size: 1rem;
+<<<<<<< HEAD
   //margin-bottom: -0.8rem;
+=======
+  margin-bottom: -0.8rem;
+>>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
   margin-left: 2rem;
 }
 
@@ -130,12 +138,17 @@ h1::first-letter {
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-light {
+<<<<<<< HEAD
   height : 12vh;
  border-bottom:2px solid rgb(183, 19, 49);
+=======
+  height : 15vh;
+>>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
 }
 
 div.footer.btn-group {
   height: 5vh;
+<<<<<<< HEAD
   position: fixed;
   bottom:0px;
 }
@@ -163,3 +176,11 @@ padding:5px;
 border:1px solid rgb(224, 224, 224);
 border-radius:5%;
 }
+=======
+  position : fixed;
+}
+
+body { 
+  height : 95vh;
+}
+>>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
