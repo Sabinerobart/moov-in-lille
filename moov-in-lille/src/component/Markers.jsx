@@ -5,61 +5,36 @@ import MyPopup from './MyPopup';
 
 
 const redStripedMarker = new L.Icon({
-<<<<<<< HEAD
     iconUrl: require('../pictures/full-place.png'),
     iconRetinaUrl: require('../pictures/full-place.png'),
-=======
-    iconUrl: require('../pictures/5.png'),
-    iconRetinaUrl: require('../pictures/5.png'),
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const redMarker = new L.Icon({
-<<<<<<< HEAD
     iconUrl: require('../pictures/1-25-2.png'),
     iconRetinaUrl: require('../pictures/1-25-2.png'),
-=======
-    iconUrl: require('../pictures/1-25.png'),
-    iconRetinaUrl: require('../pictures/1-25.png'),
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const orangeMarker = new L.Icon({
-<<<<<<< HEAD
     iconUrl: require('../pictures/25-50-2.png'),
     iconRetinaUrl: require('../pictures/25-50-2.png'),
-=======
-    iconUrl: require('../pictures/25-50.png'),
-    iconRetinaUrl: require('../pictures/25-50.png'),
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const yellowMarker = new L.Icon({
-<<<<<<< HEAD
     iconUrl: require('../pictures/50-75-2.png'),
     iconRetinaUrl: require('../pictures/50-75-2.png'),
-=======
-    iconUrl: require('../pictures/50-75.png'),
-    iconRetinaUrl: require('../pictures/50-75.png'),
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
 })
 const greenMarker = new L.Icon({
-<<<<<<< HEAD
     iconUrl: require('../pictures/75-99-2.png'),
     iconRetinaUrl: require('../pictures/75-99-2.png'),
-=======
-    iconUrl: require('../pictures/75-100.png'),
-    iconRetinaUrl: require('../pictures/75-100.png'),
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
@@ -73,13 +48,8 @@ const greyMarker = new L.Icon({
 })
 
 const fullBikeMarker = new L.Icon({
-<<<<<<< HEAD
     iconUrl: require('../pictures/fullbike2.png'),
     iconRetinaUrl: require('../pictures/fullbike2.png'),
-=======
-    iconUrl: require('../pictures/fullbike.png'),
-    iconRetinaUrl: require('../pictures/fullbike.png'),
->>>>>>> 5ab75bda465407c98ff0c3f11ee7856390f71916
     iconAnchor: [20, 40],
     popupAnchor: [0, -35],
     iconSize: [40, 40] 
