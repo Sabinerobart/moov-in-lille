@@ -14,28 +14,25 @@ export default class MyMap extends Component {
     super(props);
     this.state = {
       zoomLevel: 16,
-      location: {
-        lat: 50.633333,
-        lng: 3.066667
-      }
+      center: [50.633333, 3.066667]
     };
   }
 
   handleGeoloc() {
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
-        location: {
+        center: {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         },
-        zoomLevel: 15
+        zoomLevel: 18
       });
     });
   }
 
   render() {
     return (
-      <Map center={this.state.location} zoom={this.state.zoomLevel}>
+      <Map center={this.state.center} zoom={this.state.zoomLevel}>
         <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
         <Control position="topleft">
           <button
@@ -46,7 +43,7 @@ export default class MyMap extends Component {
             <i className="fas fa-crosshairs" />
           </button>
         </Control>
-        <Markers stations = {this.props.stations}/>
+        <Markers stations={this.props.stations} />
       </Map>
     );
   }
