@@ -24,7 +24,7 @@ h5::first-letter {
 }
 
 .leaflet-container {
-  height: 80vh;
+  height: 83vh;
 }
 
 .leaflet-popup-content-wrapper {
@@ -119,7 +119,7 @@ i {
 
 h1.accroche {
   font-size: 1rem;
-  margin-bottom: -0.8rem;
+  //margin-bottom: -0.8rem;
   margin-left: 2rem;
 }
 
@@ -130,14 +130,36 @@ h1::first-letter {
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-light {
-  height : 15vh;
+  height : 12vh;
+ border-bottom:2px solid rgb(183, 19, 49);
 }
 
 div.footer.btn-group {
   height: 5vh;
-  position : fixed;
+  position: fixed;
+  bottom:0px;
 }
 
 body { 
-  height : 95vh;
+  height : 100vh;
+}
+
+.iconeiti{
+  width:3vw;
+  height:3vh;
+}
+
+.iconefav{
+  width:3vw;
+  height:3vh;
+}
+
+.iconNav{
+margin-right:5em;
+font-family:Quicksand;
+font-size:40%;
+text-align:center;
+padding:5px;
+border:1px solid rgb(224, 224, 224);
+border-radius:5%;
 }
