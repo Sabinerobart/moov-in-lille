@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer, Circle } from "react-leaflet";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
 import "../App.scss";
@@ -44,6 +44,12 @@ export default class MyMap extends Component {
           </button>
         </Control>
         <Markers stations={this.props.stations} />
+        <Circle
+          center={this.state.center}
+          fillColor="#b71332"
+          color="transparent"
+          radius={30}
+        />
       </Map>
     );
   }
