@@ -30,6 +30,13 @@ export default class MyMap extends Component {
     });
   }
 
+  getCenter(coord) {
+    this.setState({
+      center: coord,
+      zoomLevel: 17
+    });
+  }
+
   render() {
     return (
       <Map center={this.state.center} zoom={this.state.zoomLevel}>
@@ -43,7 +50,10 @@ export default class MyMap extends Component {
             <i className="fas fa-crosshairs" />
           </button>
         </Control>
-        <Markers stations={this.props.stations} />
+        <Markers
+          stations={this.props.stations}
+          getCenter={this.getCenter.bind(this)}
+        />
         <Circle
           center={this.state.center}
           fillColor="#b71332"
