@@ -16,12 +16,12 @@ class RightPanel extends React.Component {
                 {
                     this.props.clickItinerary ? 
                         <div className={stateRightPanel}>
-                            <ItineraryPanel className="itinerary-panel" close = {this.close} />
+                            <ItineraryPanel className="itinerary-panel" />
                         </div>   
                         :
                         this.props.clickFavorites ? 
                         <div className={stateRightPanel}>
-                            <FavoritesPanel className="favorites-panel" close = {this.close} user = {this.props.user} users = {this.props.users}/>
+                            <FavoritesPanel className="favorites-panel" user = {this.props.user} users = {this.props.users}/>
                         </div> 
                         : 
                         ''

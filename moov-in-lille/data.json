@@ -1,0 +1,160 @@
+{
+    "utilisateurs": [
+      {
+        "abonne": "alexy",
+        "favoris": [
+          {
+            "emplacement": "Maison",
+            "nom": "Euratech",
+            "adresse": "Rue du cheval rouge",
+            "veloDispo": 5,
+            "borneDispo": 2
+          },
+          {
+            "emplacement": "Travail",
+            "nom": "Michou",
+            "adresse": "Rue de paris",
+            "veloDispo": 50,
+            "borneDispo": 21
+          },
+          {
+            "emplacement": "disco",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          }
+        ],
+        "id": 1
+      },
+      {
+        "abonne": "sabine",
+        "favoris": [
+          {
+            "emplacement": "Maison",
+            "nom": "Gare Lille Flandre",
+            "adresse": "Rue de machin",
+            "veloDispo": 5,
+            "borneDispo": 2
+          },
+          {
+            "emplacement": "Travail",
+            "nom": "Euratechnologie",
+            "adresse": "Rue de bretagne",
+            "veloDispo": 50,
+            "borneDispo": 21
+          },
+          {
+            "emplacement": "Chez mémé",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          },
+          {
+            "emplacement": "Tennis",
+            "nom": "Tennis saint-louis",
+            "adresse": "Rue du sucre",
+            "veloDispo": 95,
+            "borneDispo": 32
+          }
+        ],
+        "id": 2
+      },
+      {
+        "abonne": "frederic",
+        "favoris": [
+          {
+            "emplacement": "Maison",
+            "nom": "Euratech",
+            "adresse": "Rue du cheval rouge",
+            "veloDispo": 5,
+            "borneDispo": 2
+          },
+          {
+            "emplacement": "Travail",
+            "nom": "Michou",
+            "adresse": "Rue de paris",
+            "veloDispo": 50,
+            "borneDispo": 21
+          },
+          {
+            "emplacement": "Piscine",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          },
+          {
+            "emplacement": "Piscine",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          },
+          {
+            "emplacement": "Piscine",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          }
+        ],
+        "id": 3
+      },
+      {
+        "abonne": "axelle",
+        "favoris": [
+          {
+            "emplacement": "Maison",
+            "nom": "Euratech",
+            "adresse": "Rue du cheval rouge",
+            "veloDispo": 5,
+            "borneDispo": 2
+          },
+          {
+            "emplacement": "Travail",
+            "nom": "Michou",
+            "adresse": "Rue de paris",
+            "veloDispo": 50,
+            "borneDispo": 21
+          },
+          {
+            "emplacement": "Piscine",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          }
+        ],
+        "id": 4
+      },
+      {
+        "abonne": "nathan",
+        "favoris": [
+          {
+            "emplacement": "Maison",
+            "nom": "Euratech",
+            "adresse": "Rue du cheval rouge",
+            "veloDispo": 5,
+            "borneDispo": 2
+          },
+          {
+            "emplacement": "Travail",
+            "nom": "Michou",
+            "adresse": "Rue de paris",
+            "veloDispo": 50,
+            "borneDispo": 21
+          },
+          {
+            "emplacement": "Piscine",
+            "nom": "Josiane",
+            "adresse": "Rue de mémé",
+            "veloDispo": 18,
+            "borneDispo": 5
+          }
+        ],
+        "id": 5
+      }
+    ]
+  }
