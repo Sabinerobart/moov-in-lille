@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
             value={this.state.search}
             onChange={this.updateSearch.bind(this)}
           />
-          <div class="search" />
+          <div className="search" />
         </div>
         {this.state.search !== "" ? (
           <ul className="res">
