@@ -13,14 +13,6 @@ export default class MyPopup extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
   
-  componentWillReceiveProps() {
-    this.setState({
-      users: this.props.users.filter((user) => {
-        return user.abonne === this.props.identity
-      })
-    })
-  }
-
   onChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
@@ -28,17 +20,20 @@ export default class MyPopup extends React.Component {
   }
 
   sendInfo() {
-    const user = this.state.users[0];
-    user.favoris.push({
-      "emplacement": this.state.favoriteName,
-      "nom": this.props.station.fields.nom
-    });
-    if (user.abonne) {
+    axios
+    .get(`http://localhost:5050/utilisateurs/?abonne=${this.props.identity}`)
+    .then(res => {
       axios
-    .put(`http://localhost:5050/utilisateurs/${user.id}`, user);
-    } else {
-      console.log('non')
-    }
+      .post(`http://localhost:5050/utilisateurs`, {
+        "abonne": this.props.identity,
+        "favoris": [
+          {
+            "emplacement": this.state.favoriteName,
+            "nom": this.props.station.fields.nom
+          }
+        ],
+      });
+    }); 
   }
 
   render() {
