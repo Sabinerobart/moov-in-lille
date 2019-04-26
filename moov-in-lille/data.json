@@ -5,24 +5,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech",
-            "adresse": "Rue du cheval rouge",
-            "veloDispo": 5,
-            "borneDispo": 2
+            "nom": "euratechnologies"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou",
-            "adresse": "Rue de paris",
-            "veloDispo": 50,
-            "borneDispo": 21
+            "nom": "Michou"
           },
           {
             "emplacement": "disco",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           }
         ],
         "id": 1
@@ -32,31 +23,19 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Gare Lille Flandre",
-            "adresse": "Rue de machin",
-            "veloDispo": 5,
-            "borneDispo": 2
+            "nom": "Gare Lille Flandre"
           },
           {
             "emplacement": "Travail",
-            "nom": "Euratechnologie",
-            "adresse": "Rue de bretagne",
-            "veloDispo": 50,
-            "borneDispo": 21
+            "nom": "Euratechnologie"
           },
           {
             "emplacement": "Chez mémé",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           },
           {
             "emplacement": "Tennis",
-            "nom": "Tennis saint-louis",
-            "adresse": "Rue du sucre",
-            "veloDispo": 95,
-            "borneDispo": 32
+            "nom": "Tennis saint-louis"
           }
         ],
         "id": 2
@@ -66,38 +45,23 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech",
-            "adresse": "Rue du cheval rouge",
-            "veloDispo": 5,
-            "borneDispo": 2
+            "nom": "Euratech"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou",
-            "adresse": "Rue de paris",
-            "veloDispo": 50,
-            "borneDispo": 21
+            "nom": "Michou"
           },
           {
             "emplacement": "Piscine",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           },
           {
             "emplacement": "Piscine",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           },
           {
             "emplacement": "Piscine",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           }
         ],
         "id": 3
@@ -107,24 +71,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech",
-            "adresse": "Rue du cheval rouge",
-            "veloDispo": 5,
-            "borneDispo": 2
+            "nom": "Euratech"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou",
-            "adresse": "Rue de paris",
-            "veloDispo": 50,
-            "borneDispo": 21
+            "nom": "Michou"
           },
           {
             "emplacement": "Piscine",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           }
         ],
         "id": 4
@@ -134,24 +89,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech",
-            "adresse": "Rue du cheval rouge",
-            "veloDispo": 5,
-            "borneDispo": 2
+            "nom": "Euratech"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou",
-            "adresse": "Rue de paris",
-            "veloDispo": 50,
-            "borneDispo": 21
+            "nom": "Michou"
           },
           {
             "emplacement": "Piscine",
-            "nom": "Josiane",
-            "adresse": "Rue de mémé",
-            "veloDispo": 18,
-            "borneDispo": 5
+            "nom": "Josiane"
           }
         ],
         "id": 5
