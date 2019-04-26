@@ -5,9 +5,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink
+  NavItem
 } from "reactstrap";
+import { NavLink } from 'react-router-dom';
 import logo from "../img/logo.png";
 import itineraire from "../pictures/icone-itineraire.png";
 import favoris from "../pictures/icone-favoris.png";
@@ -40,13 +40,13 @@ class NavbarFull extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="iconNav">
-                <NavLink href="#"><img src={itineraire} alt="Itinéraire" className="iconeiti"/><br/>
+                <NavLink to="/itineraire"><img src={itineraire} alt="Itinéraire" className="iconeiti"/><br/>
                   Itinéraire
                 </NavLink>
               </NavItem>
               
               <NavItem  className="iconNav">
-                <NavLink href="#"><img src={favoris} alt="Favoris" className="iconefav"/><br/>
+                <NavLink to="/favoris"><img src={favoris} alt="Favoris" className="iconefav"/><br/>
                 Favoris</NavLink>
               </NavItem>
             </Nav>
