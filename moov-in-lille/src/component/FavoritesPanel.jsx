@@ -25,7 +25,7 @@ class FavoritesPanel extends React.Component {
                 return(
                     usr.favoris.map((fav,i) => {
                         return(
-                            <div key={i}>
+                            <div key={i} className="favorites">
                                 <h4>{fav.emplacement}</h4>
                                 {
                                     this.props.stations.filter((station) => {
