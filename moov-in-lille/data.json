@@ -5,15 +5,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "euratechnologies"
+            "nom": "EURATECHNOLOGIES"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou"
+            "nom": "BLANCHEMAILLE"
           },
           {
             "emplacement": "disco",
-            "nom": "Josiane"
+            "nom": "ROUGET DE L ISLE"
           }
         ],
         "id": 1
@@ -23,19 +23,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Gare Lille Flandre"
+            "nom": "BLANCHEMAILLE"
           },
           {
             "emplacement": "Travail",
-            "nom": "Euratechnologie"
+            "nom": "EURATECHNOLOGIES"
           },
           {
             "emplacement": "Chez mémé",
-            "nom": "Josiane"
-          },
-          {
-            "emplacement": "Tennis",
-            "nom": "Tennis saint-louis"
+            "nom": "ROUGET DE L ISLE"
           }
         ],
         "id": 2
@@ -45,23 +41,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech"
+            "nom": "BLANCHEMAILLE"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou"
+            "nom": "EURATECHNOLOGIES"
           },
           {
-            "emplacement": "Piscine",
-            "nom": "Josiane"
-          },
-          {
-            "emplacement": "Piscine",
-            "nom": "Josiane"
-          },
-          {
-            "emplacement": "Piscine",
-            "nom": "Josiane"
+            "emplacement": "Chez mémé",
+            "nom": "ROUGET DE L ISLE"
           }
         ],
         "id": 3
@@ -71,15 +59,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech"
+            "nom": "BLANCHEMAILLE"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou"
+            "nom": "EURATECHNOLOGIES"
           },
           {
-            "emplacement": "Piscine",
-            "nom": "Josiane"
+            "emplacement": "Chez mémé",
+            "nom": "ROUGET DE L ISLE"
           }
         ],
         "id": 4
@@ -89,15 +77,15 @@
         "favoris": [
           {
             "emplacement": "Maison",
-            "nom": "Euratech"
+            "nom": "BLANCHEMAILLE"
           },
           {
             "emplacement": "Travail",
-            "nom": "Michou"
+            "nom": "EURATECHNOLOGIES"
           },
           {
-            "emplacement": "Piscine",
-            "nom": "Josiane"
+            "emplacement": "Chez mémé",
+            "nom": "ROUGET DE L ISLE"
           }
         ],
         "id": 5
