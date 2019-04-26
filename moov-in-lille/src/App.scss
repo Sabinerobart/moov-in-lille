@@ -136,13 +136,13 @@ h1::first-letter {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 40vh;
-  left: 75vw;
+  top: 5vh;
+  right: 1.2vw;
   z-index: 1000;
 }
 
 .search-box {
-  width: 300px;
+  width: 280px;
   height: 200px;
 
   .search {
@@ -152,13 +152,13 @@ h1::first-letter {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     background: #b71332;
     border-radius: 50%;
     transition: all 1s;
     z-index: 4;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 25px 0 rgba(129, 129, 129, 0.4);
 
     &:hover {
       cursor: pointer;
@@ -168,15 +168,16 @@ h1::first-letter {
       content: "";
       position: absolute;
       margin: auto;
-      top: 22px;
+      top: 13px;
       right: 0;
       bottom: 0;
-      left: 22px;
-      width: 12px;
+      left: 15px;
+      width: 8px;
       height: 2px;
       background: white;
       transform: rotate(45deg);
       transition: all .5s;
+      box-shadow: 0 20px 25px 0 rgba(122, 122, 122, 0.2);
     }
 
     &::after {
@@ -187,8 +188,8 @@ h1::first-letter {
       right: 0;
       bottom: 0;
       left: -5px;
-      width: 25px;
-      height: 25px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       border: 2px solid white;
       transition: all .5s;
@@ -202,8 +203,8 @@ h1::first-letter {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     outline: none;
     border: none;
     background: #f8f8f8;
@@ -211,7 +212,7 @@ h1::first-letter {
     padding: 0 80px 0 20px;
     border-radius: 30px;
     box-shadow: 0 0 25px 0 #cccccc,
-      0 20px 25px 0 rgba(0, 0, 0, 0.2);
+      0 20px 25px 0 rgba(122, 122, 122, 0.2);
     transition: all 1s;
     opacity: 0;
     z-index: 5;
@@ -223,7 +224,7 @@ h1::first-letter {
     }
 
     &:focus {
-      width: 300px;
+      width: 280px;
       opacity: 1;
       cursor: text;
     }
@@ -236,13 +237,13 @@ h1::first-letter {
       &::before {
         top: 0;
         left: 0;
-        width: 25px;
+        width: 20px;
       }
 
       &::after {
         top: 0;
         left: 0;
-        width: 25px;
+        width: 20px;
         height: 2px;
         border: none;
         background: rgb(226, 226, 226);
@@ -261,10 +262,10 @@ h1::first-letter {
 
 ul.res {
   position: fixed;
-  width: 300px;
-  height: 150px;
-  overflow: scroll;
-  margin-top: 130px;
+  width: 280px;
+  height: 160px;
+  overflow: auto;
+  margin-top: 120px;
   padding: 0;
   color: #b71332;
   font-weight: bold;
