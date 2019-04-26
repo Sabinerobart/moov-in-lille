@@ -21,7 +21,7 @@ class RightPanel extends React.Component {
                         :
                         this.props.clickFavorites ? 
                         <div className={stateRightPanel}>
-                            <FavoritesPanel className="favorites-panel" user = {this.props.user} users = {this.props.users} stations={this.props.stations}/>
+                            <FavoritesPanel className="favorites-panel" identity = {this.props.identity} users = {this.props.users} stations={this.props.stations}/>
                         </div> 
                         : 
                         ''

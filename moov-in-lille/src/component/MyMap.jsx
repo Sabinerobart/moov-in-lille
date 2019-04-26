@@ -47,7 +47,7 @@ export default class MyMap extends Component {
             <i className="fas fa-crosshairs" />
           </button>
         </Control>
-        <Markers stations = {this.props.stations}/>
+        <Markers stations = {this.props.stations} users = {this.props.users} identity = {this.props.identity}/>
       </Map>
     );
   }

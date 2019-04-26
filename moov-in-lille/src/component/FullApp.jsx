@@ -10,9 +10,11 @@ class FullApp extends Component {
     
         this.clickItinerary = this.clickItinerary.bind(this)
         this.clickFavorites = this.clickFavorites.bind(this)
+        this.takeUser = this.takeUser.bind(this);
         this.state =  {
             clickItinerary: false,
-            clickFavorites: false
+            clickFavorites: false,
+            user: 'visiteur'
         }
     }
     
@@ -29,12 +31,18 @@ class FullApp extends Component {
             clickItinerary: false
         })
     }
+
+    takeUser(usr) {
+        this.setState({
+            user: usr.toLowerCase(),
+        })
+    }
     
     render() {
         return (
             <div className="App">
-                <NavbarFull clickItinerary = {this.clickItinerary} clickFavorites = {this.clickFavorites}/>
-                <DataContainer clickItinerary = {this.state.clickItinerary} clickFavorites = {this.state.clickFavorites}/>
+                <NavbarFull clickItinerary = {this.clickItinerary} clickFavorites = {this.clickFavorites} user = {this.takeUser}/>
+                <DataContainer clickItinerary = {this.state.clickItinerary} clickFavorites = {this.state.clickFavorites} identity={this.state.user}/>
                 <Footer />
             </div>
         );

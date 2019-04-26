@@ -1,14 +1,24 @@
 import React from "react";
 import { Popup } from "react-leaflet";
 import CircProgressBar from "./CircProgressBar";
+import axios from 'axios';
 
 export default class MyPopup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favoriteName: ''
+      favoriteName: '',
+      users: []
     };
     this.onChange = this.onChange.bind(this);
+  }
+  
+  componentWillReceiveProps() {
+    this.setState({
+      users: this.props.users.filter((user) => {
+        return user.abonne === this.props.identity
+      })
+    })
   }
 
   onChange(e) {
@@ -18,7 +28,17 @@ export default class MyPopup extends React.Component {
   }
 
   sendInfo() {
-    console.log(this.state.favoriteName)
+    const user = this.state.users[0];
+    user.favoris.push({
+      "emplacement": this.state.favoriteName,
+      "nom": this.props.station.fields.nom
+    });
+    if (user.abonne) {
+      axios
+    .put(`http://localhost:5050/utilisateurs/${user.id}`, user);
+    } else {
+      console.log('non')
+    }
   }
 
   render() {

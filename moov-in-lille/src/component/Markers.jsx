@@ -67,43 +67,43 @@ class Markers extends Component {
                     case (percentageFreeBike === 0):
                     return(
                         <Marker key={key} position={station.fields.geo} icon={redStripedMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                     )
                     case (percentageFreeBike >= 1 && percentageFreeBike <= 25):
                         return (
                         <Marker key={key} position={station.fields.geo} icon={redMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                         )
                     case (percentageFreeBike > 25 && percentageFreeBike <= 50):
                         return(
                         <Marker key={key} position={station.fields.geo} icon={orangeMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                         )
                     case (percentageFreeBike > 50 && percentageFreeBike <= 75):
                         return(
                         <Marker key={key} position={station.fields.geo} icon={yellowMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                         )
                     case (percentageFreeBike > 75 && percentageFreeBike <= 100):
                         return(
                         <Marker key={key} position={station.fields.geo} icon={greenMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                         )
                     case (percentageFreeBike === 100):
                     return(
                         <Marker key={key} position={station.fields.geo} icon={fullBikeMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                     )
                     default: 
                     return(
                         <Marker key={key} position={station.fields.geo} icon={greyMarker}>
-                            <MyPopup station = {station}/>
+                            <MyPopup station = {station} users = {this.props.users} identity = {this.props.identity}/>
                         </Marker>
                         )
                         

@@ -19,9 +19,23 @@ class NavbarFull extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      isRightPanelOpen: false
+      isRightPanelOpen: false,
+      identity: ''
     };
+    this.onChange = this.onChange.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
+
+  onChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  submitForm(e) {
+    e.preventDefault();
+    this.props.user(this.state.identity);
+  };
 
   toggle() {
     this.setState({
@@ -41,11 +55,25 @@ class NavbarFull extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="iconNav">
+                <form onSubmit={this.submitForm}>
+                  <div className="form-data">
+                    <label htmlFor="lastname">Identifiant:</label>
+                    <input
+                        type="text"
+                        id="identity"
+                        name="identity"
+                        onChange={this.onChange}
+                        value={this.state.identity}
+                    />
+                    <button type="submit" value="OK">OK</button>
+                  </div>
+                </form>
+              </NavItem>
+              <NavItem className="iconNav">
                 <NavLink to="/itineraire" onClick = {this.props.clickItinerary}><img src={itineraire} alt="Itinéraire" className="iconeiti"/><br/>
                   Itinéraire
                 </NavLink>
               </NavItem>
-              
               <NavItem  className="iconNav">
                 <NavLink to="/favoris" onClick = {this.props.clickFavorites}><img src={favoris} alt="Favoris" className="iconefav"/><br/>
                 Favoris</NavLink>
