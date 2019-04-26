@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import MyMap from "./MyMap";
+import RightPanel from './RightPanel';
 
 class DataContainer extends React.Component {
   constructor(props) {
@@ -24,7 +25,8 @@ class DataContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <MyMap stations={this.state.stations} />
+        <MyMap stations={this.state.stations} clickItinerary = {this.props.clickItinerary} clickFavorites = {this.props.clickFavorites}/>
+        <RightPanel clickItinerary = {this.props.clickItinerary} clickFavorites = {this.props.clickFavorites}/>
       </React.Fragment>
     );
   }

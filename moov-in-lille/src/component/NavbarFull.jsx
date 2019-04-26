@@ -41,13 +41,13 @@ class NavbarFull extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="iconNav">
-                <NavLink to="/itineraire"><img src={itineraire} alt="Itinéraire" className="iconeiti"/><br/>
+                <NavLink to="/itineraire" onClick = {this.props.clickItinerary}><img src={itineraire} alt="Itinéraire" className="iconeiti"/><br/>
                   Itinéraire
                 </NavLink>
               </NavItem>
               
               <NavItem  className="iconNav">
-                <NavLink to="/favoris"><img src={favoris} alt="Favoris" className="iconefav"/><br/>
+                <NavLink to="/favoris" onClick = {this.props.clickFavorites}><img src={favoris} alt="Favoris" className="iconefav"/><br/>
                 Favoris</NavLink>
               </NavItem>
             </Nav>

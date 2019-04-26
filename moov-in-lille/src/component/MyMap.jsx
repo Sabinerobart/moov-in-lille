@@ -34,8 +34,9 @@ export default class MyMap extends Component {
   }
 
   render() {
+    const stateClickOnItinerary = this.props.clickItinerary || this.props.clickFavorites ? 'leaflet-container-mid' : 'leaflet-container-full' ;
     return (
-      <Map center={this.state.location} zoom={this.state.zoomLevel}>
+      <Map center={this.state.location} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
         <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
         <Control position="topleft">
           <button

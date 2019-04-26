@@ -172,3 +172,29 @@ body {
   color: crimson;
   text-decoration: none;
 }
+
+.right-panel-open {
+  position: absolute;
+  display: block;
+  top: 11vh;
+  height: 82vh;
+  right: 0px;
+  width: 25vw;
+  background-color: #f8f9fa;
+}
+
+.right-panel-close {
+  display: none;
+}
+
+.leaflet-container-mid {
+  height: 82vh;
+  width: 75vw;
+  z-index: 0;
+}
+
+.leaflet-container-full {
+  height: 82vh;
+  width: 100vw;
+  z-index: 0;
+}
