@@ -31,7 +31,7 @@ class NavbarFull extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="xs">
           <NavbarBrand href="/">
             <img className="logo" src={logo} alt="logo" />
             <h1 className='accroche'> Trouvez votre V'Lille en 1 clic !</h1>
