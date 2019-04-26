@@ -7,6 +7,7 @@ import {
   Nav,
   NavItem
 } from "reactstrap";
+import "../App.scss";
 import { NavLink } from 'react-router-dom';
 import logo from "../img/logo.png";
 import itineraire from "../pictures/icone-itineraire.png";
