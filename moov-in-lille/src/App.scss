@@ -24,7 +24,7 @@ h5::first-letter {
 }
 
 .leaflet-container {
-  height: 83vh;
+  height: 82vh;
 }
 
 .leaflet-popup-content-wrapper {
@@ -82,7 +82,7 @@ i {
 }
 
 .logo {
-  height: 7vh;
+  height: 6vh;
   margin-left: 1.5rem;
 }
 
@@ -123,7 +123,6 @@ i {
 
 h1.accroche {
   font-size: 1rem;
-  //margin-bottom: -0.8rem;
   margin-left: 2rem;
 }
 
@@ -207,11 +206,11 @@ h1::first-letter {
     height: 50px;
     outline: none;
     border: none;
-    background: #b71332;
-    color: white;
+    background: #f8f8f8;
+    color: #b71332;
     padding: 0 80px 0 20px;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 #b71332,
+    box-shadow: 0 0 25px 0 #cccccc,
       0 20px 25px 0 rgba(0, 0, 0, 0.2);
     transition: all 1s;
     opacity: 0;
@@ -231,7 +230,7 @@ h1::first-letter {
 
     &:focus~.search {
       right: -250px;
-      background: #151515;
+      background: #b71332;
       z-index: 6;
 
       &::before {
@@ -246,14 +245,14 @@ h1::first-letter {
         width: 25px;
         height: 2px;
         border: none;
-        background: white;
+        background: rgb(226, 226, 226);
         border-radius: 0%;
         transform: rotate(-45deg);
       }
     }
 
     &::placeholder {
-      color: white;
+      color: rgb(99, 99, 99);
       opacity: 0.8;
       font-weight: bolder;
     }
@@ -261,10 +260,11 @@ h1::first-letter {
 }
 
 ul.res {
+  position: fixed;
   width: 300px;
   height: 150px;
   overflow: scroll;
-  margin: 0;
+  margin-top: 130px;
   padding: 0;
   color: #b71332;
   font-weight: bold;
@@ -274,42 +274,46 @@ ul.res {
   -webkit-overflow-scrolling: touch;
 }
 
+
 li.res {
   padding: 10px 20px;
   cursor: pointer;
   border-bottom: 1px solid rgba(183, 19, 49, 0.486);
+}
 
-  nav.navbar.navbar-expand-md.navbar-light.bg-light {
-    height: 12vh;
-    border-bottom: 2px solid rgb(183, 19, 49);
-  }
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+  height: 11vh;
+  border-bottom: 2px solid rgb(183, 19, 49);
+}
 
-  div.footer.btn-group {
-    height: 5vh;
-    position: fixed;
-    bottom: 0px;
-  }
+div.footer.btn-group {
+  height: 5vh;
+  position: fixed;
+  bottom: 0px;
+}
 
-  body {
-    height: 100vh;
-  }
+body {
+  height: 100vh;
+}
 
-  .iconeiti {
-    width: 3vw;
-    height: 3vh;
-  }
+.iconeiti {
+  width: 2vw;
+  height: 2vw;
+}
 
-  .iconefav {
-    width: 3vw;
-    height: 3vh;
-  }
+.iconefav {
+  width: 2vw;
+  height: 2vw;
+}
 
-  .iconNav {
-    margin-right: 5em;
-    font-family: Quicksand;
-    font-size: 40%;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid rgb(224, 224, 224);
-    border-radius: 5%;
-  }
+.iconNav {
+  margin-right: 5em;
+  font-family: Quicksand;
+  font-size: 40%;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  border-top: 2px solid rgb(183, 19, 49);
+  border-radius: 5%;
+  background: white;
+}
