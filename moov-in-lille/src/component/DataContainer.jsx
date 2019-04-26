@@ -26,7 +26,7 @@ class DataContainer extends React.Component {
     return (
       <React.Fragment>
         <MyMap stations={this.state.stations} clickItinerary = {this.props.clickItinerary} clickFavorites = {this.props.clickFavorites}/>
-        <RightPanel clickItinerary = {this.props.clickItinerary} clickFavorites = {this.props.clickFavorites}/>
+        <RightPanel clickItinerary = {this.props.clickItinerary} clickFavorites = {this.props.clickFavorites} stations={this.state.stations}/>
       </React.Fragment>
     );
   }
