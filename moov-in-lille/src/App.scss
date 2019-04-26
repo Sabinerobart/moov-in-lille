@@ -163,3 +163,22 @@ body {
   border-radius:5%;
   background:white;
 }
+
+.footer{
+  width : 100vh;
+  position : fixed;
+}
+
+img .mapLegend {
+  height : 3rem;
+}
+
+.mapLegend {
+  background-color : white ;
+  display : inline-block;
+  width : 70% ; 
+}
+
+.mentions{
+  width : 30%;
+}
