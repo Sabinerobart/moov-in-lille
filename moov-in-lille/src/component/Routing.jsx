@@ -53,23 +53,20 @@ class Routing extends Component {
 
   initializeRouting() {
     if (this.props.map && !this.routing) {
-      const plan = new L.Routing.Plan(
-        [L.latLng(50.63589, 3.062471), L.latLng(50.63407, 3.02066)],
-        {
-          routeWhileDragging: false,
-          geocoder: L.Control.Geocoder.nominatim(),
-          createMarker: (i, wp, nWps) => {
-            if (i === 0 || i === nWps - 1) {
-              return L.marker(wp.latLng, {
-                draggable: true,
-                icon: myStartOrEndIcon
-              });
-            } else {
-              return L.marker(wp.latLng, { draggable: true, icon: myViaIcon });
-            }
+      const plan = new L.Routing.Plan([], {
+        routeWhileDragging: false,
+        geocoder: L.Control.Geocoder.nominatim(),
+        createMarker: (i, wp, nWps) => {
+          if (i === 0 || i === nWps - 1) {
+            return L.marker(wp.latLng, {
+              draggable: true,
+              icon: myStartOrEndIcon
+            });
+          } else {
+            return L.marker(wp.latLng, { draggable: true, icon: myViaIcon });
           }
         }
-      );
+      });
 
       this.routing = L.Routing.control({
         plan,
