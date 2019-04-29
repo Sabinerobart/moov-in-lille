@@ -176,7 +176,7 @@ body {
 .right-panel-open {
   position: absolute;
   display: block;
-  top: 11vh;
+  top: 14.2vh;
   height: 82vh;
   right: 0px;
   width: 25vw;
@@ -202,7 +202,7 @@ body {
 .favorites {
   border-left: 2px solid rgb(183, 19, 49) !important;
   padding: 2px;
-  margin-top: 15%;
+  margin-top: 2%;
   padding-left: 5%;
   margin-left: 5%;
 }
@@ -276,11 +276,15 @@ input {
 }
 
 @media (max-width: 760px) {
-  .right-panel-open {
-    position: absolute;
+  .allfavorite {
+    overflow: hidden;
     display: block;
-    top: 72vh;
-    height: 23vh;
+  }
+  .right-panel-open {
+    position: fixed;
+    display: block;
+    top: 70vh;
+    height: 26vh;
     width: 100vw;
     right: 0px;
     background-color: white;
@@ -288,6 +292,7 @@ input {
   }
   .buttoncalcul {
     margin: 0;
+    margin-top: -1.5%;
   }
   .itinaryInput {
     border: 1px solid rgb(224, 224, 224);
