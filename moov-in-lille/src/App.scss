@@ -176,7 +176,7 @@ h1::first-letter {
       height: 2px;
       background: white;
       transform: rotate(45deg);
-      transition: all .5s;
+      transition: all 0.5s;
       box-shadow: 0 20px 25px 0 rgba(122, 122, 122, 0.2);
     }
 
@@ -192,7 +192,7 @@ h1::first-letter {
       height: 15px;
       border-radius: 50%;
       border: 2px solid white;
-      transition: all .5s;
+      transition: all 0.5s;
     }
   }
 
@@ -211,8 +211,7 @@ h1::first-letter {
     color: #b71332;
     padding: 0 80px 0 20px;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 #cccccc,
-      0 20px 25px 0 rgba(122, 122, 122, 0.2);
+    box-shadow: 0 0 25px 0 #cccccc, 0 20px 25px 0 rgba(122, 122, 122, 0.2);
     transition: all 1s;
     opacity: 0;
     z-index: 5;
@@ -229,7 +228,7 @@ h1::first-letter {
       cursor: text;
     }
 
-    &:focus~.search {
+    &:focus ~ .search {
       right: -250px;
       background: #b71332;
       z-index: 6;
@@ -275,7 +274,6 @@ ul.res {
   -webkit-overflow-scrolling: touch;
 }
 
-
 li.res {
   padding: 10px 20px;
   cursor: pointer;
@@ -307,23 +305,23 @@ body {
   height: 2vw;
 }
 
-.footer{
-  width : 100vh;
-  position : fixed;
+.footer {
+  width: 100vh;
+  position: fixed;
 }
 
 img .mapLegend {
-  height : 3rem;
+  height: 3rem;
 }
 
 .mapLegend {
-  background-color : white ;
-  display : inline-block;
-  width : 70% ; 
+  background-color: white;
+  display: inline-block;
+  width: 70%;
 }
 
-.mentions{
-  width : 30%;
+.mentions {
+  width: 30%;
 }
 
 .iconNav {
@@ -336,4 +334,21 @@ img .mapLegend {
   border-top: 2px solid rgb(183, 19, 49);
   border-radius: 5%;
   background: white;
+}
+
+.itinerary-popup {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+  button {
+    height: 30px;
+    background: none;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    &:active {
+      margin-top: 4px;
+    }
+  }
 }
