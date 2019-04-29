@@ -307,6 +307,25 @@ body {
   height: 2vw;
 }
 
+.footer{
+  width : 100vh;
+  position : fixed;
+}
+
+img .mapLegend {
+  height : 3rem;
+}
+
+.mapLegend {
+  background-color : white ;
+  display : inline-block;
+  width : 70% ; 
+}
+
+.mentions{
+  width : 30%;
+}
+
 .iconNav {
   margin-right: 5em;
   font-family: Quicksand;
