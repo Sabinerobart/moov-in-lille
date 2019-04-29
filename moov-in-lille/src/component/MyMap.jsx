@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer, Circle } from "react-leaflet";
 import SearchBar from "./SearchBar";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
@@ -11,7 +11,7 @@ const mapboxTiles =
 const mapboxAttr =
   '&copy; <a href="https://www.mapbox.com/feedback/">Mapbox</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-class MyMap extends Component {
+export default class MyMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ class MyMap extends Component {
     };
   }
 
-  setCenter(coords) {
+  getCenter(coords) {
     this.setState({
       center: coords,
       zoomLevel: 18
@@ -34,7 +34,7 @@ class MyMap extends Component {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         },
-        zoomLevel: 15
+        zoomLevel: 18
       });
     });
   }
@@ -44,7 +44,7 @@ class MyMap extends Component {
       <div>
         <SearchBar
           stations={this.props.stations}
-          setCenter={this.setCenter.bind(this)}
+          getCenter={this.getCenter.bind(this)}
         />
         <Map
           center={this.state.center}
@@ -61,7 +61,16 @@ class MyMap extends Component {
               <i className="fas fa-crosshairs" />
             </button>
           </Control>
-          <Markers stations={this.props.stations} />
+          <Markers
+            stations={this.props.stations}
+            getCenter={this.getCenter.bind(this)}
+          />
+          <Circle
+            center={this.state.center}
+            fillColor="#b71332"
+            color="transparent"
+            radius={30}
+          />
           <Routing map={this.map} />
         </Map>
       </div>
@@ -71,5 +80,3 @@ class MyMap extends Component {
 
 MyMap.propTypes = {};
 MyMap.defaultProps = {};
-
-export default MyMap;
