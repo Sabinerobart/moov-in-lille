@@ -25,9 +25,9 @@ class Footer extends Component {
         <ButtonGroup className="footer">
         
         <div className= 'mapLegend'>
-           <p> <img src={require("../pictures/indispo.png")} /> Indisponible
-           <img src={require("../pictures/75-99-2.png")} /> Places libres
-           <img src={require("../pictures/25-50-2.png")} /> Plus de places disponibles</p>
+           <p> <img src={require("../pictures/indispo.png")} alt='indisponible' /> Indisponible
+           <img src={require("../pictures/75-99-2.png")} alt='places libres' /> Places libres
+           <img src={require("../pictures/25-50-2.png")} alt='plus de places' /> Peu/Plus de places</p>
           </div>
 
           <Button onClick={this.toggle} className= 'mentions' >
