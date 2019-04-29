@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer, Circle } from "react-leaflet";
 import SearchBar from "./SearchBar";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
@@ -33,8 +33,15 @@ export default class MyMap extends Component {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         },
-        zoomLevel: 15
+        zoomLevel: 18
       });
+    });
+  }
+
+  getCenter(coord) {
+    this.setState({
+      center: coord,
+      zoomLevel: 17
     });
   }
 
@@ -56,7 +63,16 @@ export default class MyMap extends Component {
               <i className="fas fa-crosshairs" />
             </button>
           </Control>
-          <Markers stations={this.props.stations} />
+          <Markers
+            stations={this.props.stations}
+            getCenter={this.getCenter.bind(this)}
+          />
+          <Circle
+            center={this.state.center}
+            fillColor="#b71332"
+            color="transparent"
+            radius={30}
+          />
         </Map>
       </div>
     );
