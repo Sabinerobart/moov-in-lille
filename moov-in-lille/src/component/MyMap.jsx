@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Circle } from "react-leaflet";
+import SearchBar from "./SearchBar";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
 import "../App.scss";
@@ -16,6 +17,13 @@ export default class MyMap extends Component {
       zoomLevel: 16,
       center: [50.633333, 3.066667]
     };
+  }
+
+  getCenter(coords) {
+    this.setState({
+      center: coords,
+      zoomLevel: 18
+    });
   }
 
   handleGeoloc() {
@@ -39,28 +47,34 @@ export default class MyMap extends Component {
 
   render() {
     return (
-      <Map center={this.state.center} zoom={this.state.zoomLevel}>
-        <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
-        <Control position="topleft">
-          <button
-            onClick={() => this.handleGeoloc()}
-            className="geoloc-btn"
-            title="Show me where I am !"
-          >
-            <i className="fas fa-crosshairs" />
-          </button>
-        </Control>
-        <Markers
+      <div>
+        <SearchBar
           stations={this.props.stations}
           getCenter={this.getCenter.bind(this)}
         />
-        <Circle
-          center={this.state.center}
-          fillColor="#b71332"
-          color="transparent"
-          radius={30}
-        />
-      </Map>
+        <Map center={this.state.center} zoom={this.state.zoomLevel}>
+          <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
+          <Control position="topleft">
+            <button
+              onClick={() => this.handleGeoloc()}
+              className="geoloc-btn"
+              title="Show me where I am !"
+            >
+              <i className="fas fa-crosshairs" />
+            </button>
+          </Control>
+          <Markers
+            stations={this.props.stations}
+            getCenter={this.getCenter.bind(this)}
+          />
+          <Circle
+            center={this.state.center}
+            fillColor="#b71332"
+            color="transparent"
+            radius={30}
+          />
+        </Map>
+      </div>
     );
   }
 }
