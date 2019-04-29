@@ -202,9 +202,16 @@ body {
 .favorites {
   border-left: 2px solid rgb(183, 19, 49) !important;
   padding: 2px;
-  margin-top: 4%;
+  margin-top: 15%;
   padding-left: 5%;
+  margin-left: 5%;
 }
+
+.allfavorite {
+  overflow: auto;
+  max-height: 100%;
+}
+
 .titlefavorite {
   font-family: Quicksand;
   text-align: center;
