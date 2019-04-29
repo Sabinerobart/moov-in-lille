@@ -23,7 +23,14 @@ class Footer extends Component {
 
       <div>
         <ButtonGroup className="footer">
-          <Button onClick={this.toggle} >
+        
+        <div className= 'mapLegend'>
+           <p> <img src="src/pictures/indispo.png" /> Indisponible
+           <img src="src/pictures/25-50-2.png" /> Places libres
+           <img src="../pictures/75-99-2.png" /> Plus de places disponibles</p>
+          </div>
+
+          <Button onClick={this.toggle} className= 'mentions' >
             Mentions légales
             </Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.state.className}>
@@ -130,10 +137,6 @@ class Footer extends Component {
               <Button color="danger" onClick={this.toggle}>Cancel</Button>
             </ModalFooter>
           </Modal>
-          <Button>
-            Carte du site
-            </Button>
-
         </ButtonGroup>
       </div>
     );
