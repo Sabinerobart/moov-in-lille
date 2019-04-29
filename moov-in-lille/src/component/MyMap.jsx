@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer, Circle } from "react-leaflet";
+import { Map, TileLayer } from "react-leaflet";
 import SearchBar from "./SearchBar";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
@@ -11,7 +11,7 @@ const mapboxTiles =
 const mapboxAttr =
   '&copy; <a href="https://www.mapbox.com/feedback/">Mapbox</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-export default class MyMap extends Component {
+class MyMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ export default class MyMap extends Component {
     };
   }
 
-  getCenter(coords) {
+  setCenter(coords) {
     this.setState({
       center: coords,
       zoomLevel: 18
@@ -34,15 +34,8 @@ export default class MyMap extends Component {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         },
-        zoomLevel: 18
+        zoomLevel: 15
       });
-    });
-  }
-
-  getCenter(coord) {
-    this.setState({
-      center: coord,
-      zoomLevel: 17
     });
   }
 
@@ -51,9 +44,13 @@ export default class MyMap extends Component {
       <div>
         <SearchBar
           stations={this.props.stations}
-          getCenter={this.getCenter.bind(this)}
+          setCenter={this.setCenter.bind(this)}
         />
-        <Map center={this.state.center} zoom={this.state.zoomLevel}>
+        <Map
+          center={this.state.center}
+          zoom={this.state.zoomLevel}
+          ref={map => (this.map = map)}
+        >
           <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
           <Control position="topleft">
             <button
@@ -64,16 +61,7 @@ export default class MyMap extends Component {
               <i className="fas fa-crosshairs" />
             </button>
           </Control>
-          <Markers
-            stations={this.props.stations}
-            getCenter={this.getCenter.bind(this)}
-          />
-          <Circle
-            center={this.state.center}
-            fillColor="#b71332"
-            color="transparent"
-            radius={30}
-          />
+          <Markers stations={this.props.stations} />
           <Routing map={this.map} />
         </Map>
       </div>
@@ -83,3 +71,5 @@ export default class MyMap extends Component {
 
 MyMap.propTypes = {};
 MyMap.defaultProps = {};
+
+export default MyMap;
