@@ -129,38 +129,39 @@ h1::first-letter {
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-light {
-  border-bottom:2px solid rgb(183, 19, 49);
+  border-bottom: 2px solid rgb(183, 19, 49);
 }
 
 div.footer.btn-group {
   height: 5vh;
   position: fixed;
-  bottom:0px;
+  bottom: 0px;
 }
 
-body { 
-  height :100vh;
+body {
+  height: 100vh;
 }
 
-.iconeiti{
-  width:2vw;
-  height:2vw;
+.iconeiti {
+  width: 2vw;
+  height: 2vw;
 }
 
-.iconefav{
-  width:2vw;
-  height:2vw;
+.iconefav {
+  width: 2vw;
+  height: 2vw;
 }
 
-.iconNav{
-  margin-right:5em;
-  font-family:Quicksand;
-  font-size:40%;
-  text-align:center;
-  padding:5px;
-  border:1px solid rgb(224, 224, 224);
-  border-radius:5%;
-  background:white;
+.iconNav {
+  margin-right: 5em;
+  font-family: Quicksand;
+  font-size: 40%;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  border-top: 3px solid rgb(183, 19, 49) !important;
+  border-radius: 5%;
+  background: white;
 }
 
 .iconNav a {
@@ -199,5 +200,60 @@ body {
 }
 
 .favorites {
-  border: 1px solid black;
+  border-left: 2px solid rgb(183, 19, 49) !important;
+  padding: 2px;
+  margin-top: 4%;
+  padding-left: 5%;
+}
+.titlefavorite {
+  font-family: Quicksand;
+  text-align: center;
+  color: black;
+  text-transform: capitalize;
+  text-decoration: underline rgb(183, 19, 49);
+}
+
+h4,
+.titlefavorite::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
+}
+
+input {
+  border: 1px solid rgb(224, 224, 224);
+  background: white;
+  font-family: Quicksand;
+  padding: 2px;
+}
+
+.buttoncalcul {
+  background: rgb(183, 19, 49) !important;
+  border: 1px solid rgb(183, 19, 49) !important;
+  margin-left: 35%;
+  color: white;
+}
+
+.okbutton {
+  background: rgb(183, 19, 49) !important;
+  border: 1px solid rgb(183, 19, 49) !important;
+  color: white;
+  font-family: quicksand;
+  font-weight: bolder;
+  border-radius: 2px;
+}
+
+.itinary-title {
+  text-align: center;
+  font-size: 155%;
+  font-family: Quicksand;
+}
+
+.lastname {
+  margin-top: 1%;
+}
+
+.fromto {
+  margin-left: 5%;
+  font-size: 120%;
 }

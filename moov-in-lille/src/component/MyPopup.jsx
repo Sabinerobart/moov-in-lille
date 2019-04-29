@@ -1,39 +1,38 @@
 import React from "react";
 import { Popup } from "react-leaflet";
 import CircProgressBar from "./CircProgressBar";
-import axios from 'axios';
+import axios from "axios";
 
 export default class MyPopup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favoriteName: '',
+      favoriteName: "",
       users: []
     };
     this.onChange = this.onChange.bind(this);
   }
-  
+
   onChange(e) {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   }
 
   sendInfo() {
     axios
-    .get(`http://localhost:5050/utilisateurs/?abonne=${this.props.identity}`)
-    .then(res => {
-      axios
-      .post(`http://localhost:5050/utilisateurs`, {
-        "abonne": this.props.identity,
-        "favoris": [
-          {
-            "emplacement": this.state.favoriteName,
-            "nom": this.props.station.fields.nom
-          }
-        ],
+      .get(`http://localhost:5050/utilisateurs/?abonne=${this.props.identity}`)
+      .then(res => {
+        axios.post(`http://localhost:5050/utilisateurs`, {
+          abonne: this.props.identity,
+          favoris: [
+            {
+              emplacement: this.state.favoriteName,
+              nom: this.props.station.fields.nom
+            }
+          ]
+        });
       });
-    }); 
   }
 
   render() {
@@ -54,13 +53,20 @@ export default class MyPopup extends React.Component {
           <div>
             <form>
               <input
-                  type="text"
-                  id="favoriteName"
-                  name="favoriteName"
-                  onChange={this.onChange}
-                  value={this.state.favoriteName}
+                type="text"
+                id="favoriteName"
+                name="favoriteName"
+                placeholder="Ajouter le nom du favoris"
+                onChange={this.onChange}
+                value={this.state.favoriteName}
               />
-              <button type="button" onClick={() => this.sendInfo()}>+</button>
+              <button
+                type="button"
+                className="okbutton"
+                onClick={() => this.sendInfo()}
+              >
+                +
+              </button>
             </form>
           </div>
         </div>
