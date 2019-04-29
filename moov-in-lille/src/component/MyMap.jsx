@@ -19,7 +19,7 @@ export default class MyMap extends Component {
     };
   }
 
-  getCenter(coords) {
+  setCenter(coords) {
     this.setState({
       center: coords,
       zoomLevel: 18
@@ -38,19 +38,12 @@ export default class MyMap extends Component {
     });
   }
 
-  getCenter(coord) {
-    this.setState({
-      center: coord,
-      zoomLevel: 17
-    });
-  }
-
   render() {
     return (
       <div>
         <SearchBar
           stations={this.props.stations}
-          getCenter={this.getCenter.bind(this)}
+          setCenter={this.setCenter.bind(this)}
         />
         <Map center={this.state.center} zoom={this.state.zoomLevel}>
           <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
@@ -65,7 +58,7 @@ export default class MyMap extends Component {
           </Control>
           <Markers
             stations={this.props.stations}
-            getCenter={this.getCenter.bind(this)}
+            setCenter={this.setCenter.bind(this)}
           />
           <Circle
             center={this.state.center}
