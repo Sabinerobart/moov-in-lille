@@ -225,6 +225,16 @@ input {
   background: white;
   font-family: Quicksand;
   padding: 2px;
+  width: 75%;
+}
+
+.itinaryInput {
+  border: 1px solid rgb(224, 224, 224);
+  background: white;
+  font-family: Quicksand;
+  padding: 2%;
+  width: 95% !important;
+  margin-left: 2.5%;
 }
 
 .buttoncalcul {
@@ -256,4 +266,33 @@ input {
 .fromto {
   margin-left: 5%;
   font-size: 120%;
+}
+
+@media (max-width: 760px) {
+  .right-panel-open {
+    position: absolute;
+    display: block;
+    top: 72vh;
+    height: 23vh;
+    width: 100vw;
+    right: 0px;
+    background-color: white;
+    text-align: center;
+  }
+  .buttoncalcul {
+    margin: 0;
+  }
+  .itinaryInput {
+    border: 1px solid rgb(224, 224, 224);
+    background: white;
+    font-family: Quicksand;
+    padding: 2%;
+    width: 75% !important;
+    margin-left: 12%;
+  }
+  .leaflet-container-mid {
+    //height: 100vh;
+    width: 100vw;
+    z-index: 0;
+  }
 }

@@ -16,7 +16,8 @@ class ItineraryPanel extends React.Component {
               type="input"
               name="itinerary"
               id="itineraryFrom"
-              placeholder="Depart"
+              placeholder="Départ"
+              className="itinaryInput"
             />
           </FormGroup>
           <FormGroup>
@@ -28,6 +29,7 @@ class ItineraryPanel extends React.Component {
               name="itinerary"
               id="itineraryTo"
               placeholder="Destination"
+              className="itinaryInput"
             />
           </FormGroup>
           <Button className="buttoncalcul">Calculer</Button>
