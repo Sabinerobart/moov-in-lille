@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer, Circle } from "react-leaflet";
+import SearchBar from "./SearchBar";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
 import "../App.scss";
@@ -14,41 +15,69 @@ export default class MyMap extends Component {
     super(props);
     this.state = {
       zoomLevel: 16,
-      location: {
-        lat: 50.633333,
-        lng: 3.066667
-      }
+      center: [50.633333, 3.066667]
     };
+  }
+
+  getCenter(coords) {
+    this.setState({
+      center: coords,
+      zoomLevel: 18
+    });
   }
 
   handleGeoloc() {
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
-        location: {
+        center: {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         },
-        zoomLevel: 15
+        zoomLevel: 18
       });
+    });
+  }
+
+  getCenter(coord) {
+    this.setState({
+      center: coord,
+      zoomLevel: 17
     });
   }
 
   render() {
     const stateClickOnItinerary = this.props.clickItinerary || this.props.clickFavorites ? 'leaflet-container-mid' : 'leaflet-container-full' ;
     return (
-      <Map center={this.state.location} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
-        <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
-        <Control position="topleft">
-          <button
-            onClick={() => this.handleGeoloc()}
-            className="geoloc-btn"
-            title="Show me where I am !"
-          >
-            <i className="fas fa-crosshairs" />
-          </button>
-        </Control>
-        <Markers stations = {this.props.stations} users = {this.props.users} identity = {this.props.identity}/>
-      </Map>
+       <div>
+          <SearchBar
+            stations={this.props.stations}
+            getCenter={this.getCenter.bind(this)}
+          />
+          <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
+             <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
+              <Control position="topleft">
+                <button
+                  onClick={() => this.handleGeoloc()}
+                  className="geoloc-btn"
+                  title="Show me where I am !"
+                >
+                  <i className="fas fa-crosshairs" />
+                </button>
+              </Control>
+              <Markers 
+              stations = {this.props.stations}            
+              getCenter={this.getCenter.bind(this)}
+              users = {this.props.users} 
+              identity = {this.props.identity}
+              />
+              <Circle
+                center={this.state.center}
+                fillColor="#b71332"
+                color="transparent"
+                radius={30}
+              />
+          </Map>
+       </div>
     );
   }
 }
