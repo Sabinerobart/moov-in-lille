@@ -3,7 +3,7 @@ import { Popup } from "react-leaflet";
 import CircProgressBar from "./CircProgressBar";
 import axios from "axios";
 
-export default class MyPopup extends React.Component {
+class MyPopup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,3 +74,5 @@ export default class MyPopup extends React.Component {
     );
   }
 }
+
+export default MyPopup;
