@@ -72,7 +72,7 @@ class Routing extends Component {
         plan,
         serviceUrl: MAPBOX_SERVICE_URL,
         router: L.Routing.mapbox(MAPBOX_TOKEN, { language: "fr" }),
-        position: "bottomleft",
+        position: "topright",
         lineOptions: {
           styles: [{ color: "rgb(179, 26, 26)", opacity: 1, weight: 5 }]
         }

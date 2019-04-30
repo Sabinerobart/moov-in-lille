@@ -11,7 +11,7 @@ const mapboxTiles =
 const mapboxAttr =
   '&copy; <a href="https://www.mapbox.com/feedback/">Mapbox</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-export default class MyMap extends Component {
+class MyMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,14 +40,22 @@ export default class MyMap extends Component {
   }
 
   render() {
-    const stateClickOnItinerary = this.props.clickItinerary || this.props.clickFavorites ? 'leaflet-container-mid' : 'leaflet-container-full' ;
+    const stateClickOnItinerary =
+      this.props.clickItinerary || this.props.clickFavorites
+        ? "leaflet-container-mid"
+        : "leaflet-container-full";
     return (
       <div>
         <SearchBar
           stations={this.props.stations}
           setCenter={this.setCenter.bind(this)}
         />
-        <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
+        <Map
+          center={this.state.center}
+          zoom={this.state.zoomLevel}
+          className={stateClickOnItinerary}
+          ref={map => (this.map = map)}
+        >
           <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
           <Control position="topleft">
             <button
@@ -58,11 +66,11 @@ export default class MyMap extends Component {
               <i className="fas fa-crosshairs" />
             </button>
           </Control>
-          <Markers 
-            stations = {this.props.stations}            
-            getCenter={this.getCenter.bind(this)}
-            users = {this.props.users} 
-            identity = {this.props.identity}
+          <Markers
+            stations={this.props.stations}
+            setCenter={this.setCenter.bind(this)}
+            users={this.props.users}
+            identity={this.props.identity}
           />
           <Circle
             center={this.state.center}
@@ -79,3 +87,5 @@ export default class MyMap extends Component {
 
 MyMap.propTypes = {};
 MyMap.defaultProps = {};
+
+export default MyMap;

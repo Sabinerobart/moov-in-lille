@@ -3,7 +3,7 @@ import { Popup } from "react-leaflet";
 import CircProgressBar from "./CircProgressBar";
 import axios from "axios";
 
-export default class MyPopup extends React.Component {
+class MyPopup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,7 +45,6 @@ export default class MyPopup extends React.Component {
         <div className="row popup-container justify-content-center">
           <div className="col-12 text-center">
             <h5 className="m-0">{title}</h5>
-            <div className="separation mx-auto" />
           </div>
           <div className="my-3">
             <CircProgressBar stationSlider={this.props.station} />
@@ -56,7 +55,7 @@ export default class MyPopup extends React.Component {
                 type="text"
                 id="favoriteName"
                 name="favoriteName"
-                placeholder="Noter le nom du favoris"
+                placeholder="Notez le nom du favori"
                 onChange={this.onChange}
                 value={this.state.favoriteName}
               />
@@ -74,3 +73,5 @@ export default class MyPopup extends React.Component {
     );
   }
 }
+
+export default MyPopup;

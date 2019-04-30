@@ -49,7 +49,7 @@ class CircProgressBar extends React.Component {
           progressColor={rangeColor}
           tooltipColor={disable}
         />
-        <Row className="popup-info align-items-center p-0 m-0">
+        <Row className="popup-info align-items-center p-0 mx-0">
           <Col xs="6" className={zeroBikes}>
             {nbBikes}
           </Col>

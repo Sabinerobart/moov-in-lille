@@ -39,6 +39,16 @@
         }
       ],
       "id": 4
+    },
+    {
+      "abonne": "sabine",
+      "favoris": [
+        {
+          "emplacement": "maison",
+          "nom": "DELESALLE MEDIATHEQUE"
+        }
+      ],
+      "id": 5
     }
   ]
 }

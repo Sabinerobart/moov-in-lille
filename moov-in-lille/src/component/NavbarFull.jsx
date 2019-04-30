@@ -10,7 +10,6 @@ import {
 import "../App.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
-import itineraire from "../pictures/icone-itineraire.png";
 import favoris from "../pictures/icone-favoris.png";
 
 class NavbarFull extends React.Component {
@@ -20,7 +19,8 @@ class NavbarFull extends React.Component {
     this.state = {
       isOpen: false,
       isRightPanelOpen: false,
-      identity: ""
+      identity: "visiteur",
+      myId: "S'identifier"
     };
     this.onChange = this.onChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
@@ -34,6 +34,9 @@ class NavbarFull extends React.Component {
 
   submitForm(e) {
     e.preventDefault();
+    this.setState({
+      myId: this.state.identity
+    });
     this.props.user(this.state.identity);
   }
 
@@ -46,7 +49,7 @@ class NavbarFull extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="sm" className="pr-md-5">
           <NavbarBrand href="/">
             <img className="logo" src={logo} alt="logo" />
             <h1 className="accroche"> Trouvez votre V'Lille en 1 clic !</h1>
@@ -54,7 +57,7 @@ class NavbarFull extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem className="iconNav">
+              <NavItem className="iconNav m-2 my-md-0 p-3">
                 <form onSubmit={this.submitForm}>
                   <div className="form-data">
                     <input
@@ -63,25 +66,25 @@ class NavbarFull extends React.Component {
                       name="identity"
                       onChange={this.onChange}
                       value={this.state.identity}
+                      className="col-4 col-sm-9"
                     />
-                    <button type="submit" value="OK" className="okbutton">
+                    <button
+                      type="submit"
+                      value="OK"
+                      className="col-1 col-sm-2 mx-2 okbutton p-0"
+                    >
                       OK
                     </button>
                     <br />
                     <label htmlFor="lastname" className="lastname">
-                      S'identifier
+                      {this.state.myId === "S'identifier"
+                        ? this.state.myId
+                        : `Bonjour, ${this.state.myId}`}
                     </label>
                   </div>
                 </form>
               </NavItem>
-              <NavItem className="iconNav">
-                <NavLink to="/itineraire" onClick={this.props.clickItinerary}>
-                  <img src={itineraire} alt="Itinéraire" className="iconeiti" />
-                  <br />
-                  Itinéraire
-                </NavLink>
-              </NavItem>
-              <NavItem className="iconNav">
+              <NavItem className="iconNav m-2 my-md-0 p-3">
                 <NavLink to="/favoris" onClick={this.props.clickFavorites}>
                   <img src={favoris} alt="Favoris" className="iconefav" />
                   <br />
