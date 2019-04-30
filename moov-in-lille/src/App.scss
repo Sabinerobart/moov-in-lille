@@ -391,6 +391,11 @@ input {
   margin-left: 2.5%;
 }
 
+.leaflet-routing-container {
+  border-top: 2px solid var(--main-color) !important;
+  border-radius: 0 0 4px 4px;
+}
+
 .buttoncalcul {
   background: rgb(183, 19, 49) !important;
   border: 1px solid rgb(183, 19, 49) !important;
