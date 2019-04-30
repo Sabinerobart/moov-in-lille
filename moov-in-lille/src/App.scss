@@ -309,7 +309,6 @@ body {
   padding: 5px;
   border: 1px solid rgb(224, 224, 224);
   border-top: 2px solid rgb(183, 19, 49);
-  border-radius: 5%;
   background: white;
 }
 
@@ -481,19 +480,6 @@ img .mapLegend {
 .mentions {
   width: 70%;
 }
-
-.iconNav {
-  margin-right: 5em;
-  font-family: Quicksand;
-  font-size: 40%;
-  text-align: center;
-  padding: 5px;
-  border: 1px solid rgb(224, 224, 224);
-  border-top: 2px solid rgb(183, 19, 49);
-  border-radius: 5%;
-  background: white;
-}
-
 .itinerary-popup {
   display: flex;
   justify-content: space-around;
