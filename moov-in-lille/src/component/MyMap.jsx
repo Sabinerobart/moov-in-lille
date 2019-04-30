@@ -39,6 +39,7 @@ export default class MyMap extends Component {
   }
 
   render() {
+    const stateClickOnItinerary = this.props.clickItinerary || this.props.clickFavorites ? 'leaflet-container-mid' : 'leaflet-container-full' ;
     return (
       <div>
         <SearchBar
@@ -60,14 +61,31 @@ export default class MyMap extends Component {
             stations={this.props.stations}
             setCenter={this.setCenter.bind(this)}
           />
-          <Circle
-            center={this.state.center}
-            fillColor="#b71332"
-            color="transparent"
-            radius={30}
-          />
-        </Map>
-      </div>
+          <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
+             <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
+              <Control position="topleft">
+                <button
+                  onClick={() => this.handleGeoloc()}
+                  className="geoloc-btn"
+                  title="Show me where I am !"
+                >
+                  <i className="fas fa-crosshairs" />
+                </button>
+              </Control>
+              <Markers 
+              stations = {this.props.stations}            
+              getCenter={this.getCenter.bind(this)}
+              users = {this.props.users} 
+              identity = {this.props.identity}
+              />
+              <Circle
+                center={this.state.center}
+                fillColor="#b71332"
+                color="transparent"
+                radius={30}
+              />
+          </Map>
+       </div>
     );
   }
 }
