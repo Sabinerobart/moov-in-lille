@@ -24,7 +24,7 @@ h5::first-letter {
 }
 
 .leaflet-container {
-  height: 82vh;
+  height: 80vh;
 }
 
 .leaflet-popup-content-wrapper {
@@ -281,12 +281,11 @@ li.res {
 }
 
 nav.navbar.navbar-expand-md.navbar-light.bg-light {
-  height: 11vh;
   border-bottom: 2px solid rgb(183, 19, 49);
 }
 
 div.footer.btn-group {
-  height: 5vh;
+  height: 6vh;
   position: fixed;
   bottom: 0px;
 }
@@ -305,9 +304,164 @@ body {
   height: 2vw;
 }
 
-.footer {
-  width: 100vh;
-  position: fixed;
+.iconNav {
+  margin-right: 5em;
+  font-family: Quicksand;
+  font-size: 40%;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  border-top: 2px solid rgb(183, 19, 49);
+  border-radius: 5%;
+  background: white;
+}
+
+.iconNav a {
+  color: black;
+}
+
+.iconNav a:hover {
+  color: crimson;
+  text-decoration: none;
+}
+
+.right-panel-open {
+  position: absolute;
+  display: block;
+  top: 14.2vh;
+  height: 82vh;
+  right: 0px;
+  width: 25vw;
+  background-color: #f8f9fa;
+}
+
+.right-panel-close {
+  display: none;
+}
+
+.leaflet-container-mid {
+  height: 82vh;
+  width: 75vw;
+  z-index: 0;
+}
+
+.leaflet-container-full {
+  height: 82vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+.favorites {
+  border-left: 2px solid rgb(183, 19, 49) !important;
+  padding: 2px;
+  margin-top: 2%;
+  padding-left: 5%;
+  margin-left: 5%;
+}
+
+.allfavorite {
+  overflow: auto;
+  max-height: 100%;
+}
+
+.titlefavorite {
+  font-family: Quicksand;
+  text-align: center;
+  color: black;
+  text-transform: capitalize;
+  text-decoration: underline rgb(183, 19, 49);
+}
+
+h4,
+.titlefavorite::first-letter {
+  color: var(--main-color);
+  font-family: "brush font", cursive;
+  font-size: 180%;
+}
+
+input {
+  border: 1px solid rgb(224, 224, 224);
+  background: white;
+  padding: 2px;
+  width: 83%;
+}
+
+.itinaryInput {
+  border: 1px solid rgb(224, 224, 224);
+  background: white;
+  font-family: Quicksand;
+  padding: 2%;
+  width: 95% !important;
+  margin-left: 2.5%;
+}
+
+.buttoncalcul {
+  background: rgb(183, 19, 49) !important;
+  border: 1px solid rgb(183, 19, 49) !important;
+  margin-left: 35%;
+  color: white;
+}
+
+.okbutton {
+  background: rgb(183, 19, 49) !important;
+  border: 1px solid rgb(183, 19, 49) !important;
+  color: white;
+  font-family: quicksand;
+  font-weight: bolder;
+  border-radius: 2px;
+}
+
+.itinary-title {
+  text-align: center;
+  font-size: 155%;
+  font-family: Quicksand;
+}
+
+.lastname {
+  margin-top: 1%;
+}
+
+.fromto {
+  margin-left: 5%;
+  font-size: 120%;
+}
+
+@media (max-width: 760px) {
+  .allfavorite {
+    overflow: hidden;
+    display: block;
+  }
+  .right-panel-open {
+    position: fixed;
+    display: block;
+    top: 70vh;
+    height: 26vh;
+    width: 100vw;
+    right: 0px;
+    background-color: white;
+    text-align: center;
+  }
+  .buttoncalcul {
+    margin: 0;
+    margin-top: -1.5%;
+  }
+  .itinaryInput {
+    border: 1px solid rgb(224, 224, 224);
+    background: white;
+    font-family: Quicksand;
+    padding: 2%;
+    width: 75% !important;
+    margin-left: 12%;
+  }
+  .leaflet-container-mid {
+    width: 100vw;
+    z-index: 0;
+  }
+
+
+.footer{
+  width : 100vh;
+  position : fixed;
 }
 
 img .mapLegend {
@@ -315,13 +469,20 @@ img .mapLegend {
 }
 
 .mapLegend {
-  background-color: white;
-  display: inline-block;
-  width: 70%;
+  background-color : white ;
+  display : inline-block;
+  width : 30% ; 
+  padding : 1rem 0 0 1rem;
+  z-index : 3;
+}
+
+.mapLegend img {
+  width : 1.5rem;
+  margin :0 0.75rem 0 0.75rem;
 }
 
 .mentions {
-  width: 30%;
+  width : 70%;
 }
 
 .iconNav {
@@ -350,5 +511,21 @@ img .mapLegend {
     &:active {
       margin-top: 4px;
     }
+  }
+}
+  
+@media screen and (max-width: 1296px) {
+  .mapLegend {
+    width : 70%;
+    display: flex;
+    margin : 0.5 0 0.5 0; 
+    position: relative;
+    bottom : 0.5rem;
+  }
+  .mentions {
+    width : 30%;
+  }
+  .leaflet-container {
+    height : 80vh;
   }
 }

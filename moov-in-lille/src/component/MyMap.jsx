@@ -20,7 +20,7 @@ export default class MyMap extends Component {
     };
   }
 
-  getCenter(coords) {
+  setCenter(coords) {
     this.setState({
       center: coords,
       zoomLevel: 18
@@ -40,17 +40,14 @@ export default class MyMap extends Component {
   }
 
   render() {
+    const stateClickOnItinerary = this.props.clickItinerary || this.props.clickFavorites ? 'leaflet-container-mid' : 'leaflet-container-full' ;
     return (
       <div>
         <SearchBar
           stations={this.props.stations}
-          getCenter={this.getCenter.bind(this)}
+          setCenter={this.setCenter.bind(this)}
         />
-        <Map
-          center={this.state.center}
-          zoom={this.state.zoomLevel}
-          ref={map => (this.map = map)}
-        >
+        <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
           <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
           <Control position="topleft">
             <button
@@ -61,9 +58,11 @@ export default class MyMap extends Component {
               <i className="fas fa-crosshairs" />
             </button>
           </Control>
-          <Markers
-            stations={this.props.stations}
+          <Markers 
+            stations = {this.props.stations}            
             getCenter={this.getCenter.bind(this)}
+            users = {this.props.users} 
+            identity = {this.props.identity}
           />
           <Circle
             center={this.state.center}

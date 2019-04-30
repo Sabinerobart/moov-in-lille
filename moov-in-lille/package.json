@@ -17,6 +17,7 @@
     "react-leaflet": "^2.2.1",
     "react-leaflet-control": "^2.1.1",
     "react-leaflet-locate-control": "^0.1.6",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "reactstrap": "^8.0.0"
   },

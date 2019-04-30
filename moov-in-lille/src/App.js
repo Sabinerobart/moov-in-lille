@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import "./App.scss";
-import NavbarFull from "./component/NavbarFull";
-import DataContainer from "./component/DataContainer";
-import Footer from './component/Footer';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import FullApp from './component/FullApp';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavbarFull />
-        <DataContainer />
-        <Footer />
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={FullApp} />
+            <Route path="/favoris" component={FullApp} />
+            <Route path="/itineraire" component={FullApp} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
