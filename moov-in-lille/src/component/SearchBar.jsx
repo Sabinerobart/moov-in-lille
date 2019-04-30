@@ -13,8 +13,13 @@ class SearchBar extends React.Component {
   }
 
   handleClick(coord) {
-    this.props.getCenter(coord);
+    this.props.setCenter(coord);
+    this.setState({
+      search : ""
+    })
   }
+
+
 
   render() {
     let filteredStations = this.props.stations.filter(station => {
