@@ -63,8 +63,13 @@ class NavbarFull extends React.Component {
                       name="identity"
                       onChange={this.onChange}
                       value={this.state.identity}
+                      className="col-9"
                     />
-                    <button type="submit" value="OK" className="okbutton">
+                    <button
+                      type="submit"
+                      value="OK"
+                      className="col-2 offset-1 okbutton p-0"
+                    >
                       OK
                     </button>
                     <br />
