@@ -54,6 +54,7 @@ class MyMap extends Component {
           center={this.state.center}
           zoom={this.state.zoomLevel}
           className={stateClickOnItinerary}
+          ref={map => (this.map = map)}
         >
           <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
           <Control position="topleft">
