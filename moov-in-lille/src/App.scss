@@ -75,6 +75,10 @@ h5::first-letter {
   color: var(--main-color);
 }
 
+.popup-info {
+  margin-top: -1rem;
+}
+
 i {
   color: #ccc;
   font-size: 1.2rem;
@@ -479,6 +483,7 @@ img .mapLegend {
 .mentions {
   width: 70%;
 }
+
 .itinerary-popup {
   display: flex;
   justify-content: space-around;
