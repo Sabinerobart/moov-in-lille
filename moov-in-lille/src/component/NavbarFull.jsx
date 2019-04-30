@@ -46,7 +46,7 @@ class NavbarFull extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="sm" className="pr-md-5">
           <NavbarBrand href="/">
             <img className="logo" src={logo} alt="logo" />
             <h1 className="accroche"> Trouvez votre V'Lille en 1 clic !</h1>
@@ -54,7 +54,7 @@ class NavbarFull extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem className="iconNav">
+              <NavItem className="iconNav m-2 my-md-0 p-3">
                 <form onSubmit={this.submitForm}>
                   <div className="form-data">
                     <input
@@ -63,12 +63,12 @@ class NavbarFull extends React.Component {
                       name="identity"
                       onChange={this.onChange}
                       value={this.state.identity}
-                      className="col-9"
+                      className="col-4 col-sm-9"
                     />
                     <button
                       type="submit"
                       value="OK"
-                      className="col-2 offset-1 okbutton p-0"
+                      className="col-1 col-sm-2 mx-2 okbutton p-0"
                     >
                       OK
                     </button>
@@ -79,14 +79,14 @@ class NavbarFull extends React.Component {
                   </div>
                 </form>
               </NavItem>
-              <NavItem className="iconNav">
+              <NavItem className="iconNav m-2 my-md-0 p-3">
                 <NavLink to="/itineraire" onClick={this.props.clickItinerary}>
                   <img src={itineraire} alt="Itinéraire" className="iconeiti" />
                   <br />
                   Itinéraire
                 </NavLink>
               </NavItem>
-              <NavItem className="iconNav">
+              <NavItem className="iconNav m-2 my-md-0 p-3">
                 <NavLink to="/favoris" onClick={this.props.clickFavorites}>
                   <img src={favoris} alt="Favoris" className="iconefav" />
                   <br />
