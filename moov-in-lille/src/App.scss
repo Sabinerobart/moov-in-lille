@@ -457,11 +457,11 @@ input {
     width: 100vw;
     z-index: 0;
   }
+}
 
-
-.footer{
-  width : 100vh;
-  position : fixed;
+.footer {
+  width: 100vh;
+  position: fixed;
 }
 
 img .mapLegend {
@@ -469,20 +469,20 @@ img .mapLegend {
 }
 
 .mapLegend {
-  background-color : white ;
-  display : inline-block;
-  width : 30% ; 
-  padding : 1rem 0 0 1rem;
-  z-index : 3;
+  background-color: white;
+  display: inline-block;
+  width: 30%;
+  padding: 1rem 0 0 1rem;
+  z-index: 3;
 }
 
 .mapLegend img {
-  width : 1.5rem;
-  margin :0 0.75rem 0 0.75rem;
+  width: 1.5rem;
+  margin: 0 0.75rem 0 0.75rem;
 }
 
 .mentions {
-  width : 70%;
+  width: 70%;
 }
 
 .iconNav {
@@ -513,19 +513,19 @@ img .mapLegend {
     }
   }
 }
-  
+
 @media screen and (max-width: 1296px) {
   .mapLegend {
-    width : 70%;
+    width: 70%;
     display: flex;
-    margin : 0.5 0 0.5 0; 
+    margin: 0.5 0 0.5 0;
     position: relative;
-    bottom : 0.5rem;
+    bottom: 0.5rem;
   }
   .mentions {
-    width : 30%;
+    width: 30%;
   }
   .leaflet-container {
-    height : 80vh;
+    height: 80vh;
   }
 }
