@@ -56,7 +56,7 @@ export default class MyPopup extends React.Component {
                 type="text"
                 id="favoriteName"
                 name="favoriteName"
-                placeholder="Noter le nom du favoris"
+                placeholder="Notez le nom du favori"
                 onChange={this.onChange}
                 value={this.state.favoriteName}
               />
