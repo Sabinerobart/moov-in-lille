@@ -74,7 +74,7 @@ class Markers extends Component {
               icon={redStripedMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
         case percentageFreeBike >= 1 && percentageFreeBike <= 25:
@@ -85,7 +85,7 @@ class Markers extends Component {
               icon={redMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
         case percentageFreeBike > 25 && percentageFreeBike <= 50:
@@ -96,7 +96,7 @@ class Markers extends Component {
               icon={orangeMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
         case percentageFreeBike > 50 && percentageFreeBike <= 75:
@@ -107,7 +107,7 @@ class Markers extends Component {
               icon={yellowMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
         case percentageFreeBike > 75 && percentageFreeBike <= 100:
@@ -118,7 +118,7 @@ class Markers extends Component {
               icon={greenMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
         case percentageFreeBike === 100:
@@ -129,7 +129,7 @@ class Markers extends Component {
               icon={fullBikeMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
         default:
@@ -140,7 +140,7 @@ class Markers extends Component {
               icon={greyMarker}
               onClick={() => this.setCenter(station.fields.geo)}
             >
-              <MyPopup station={station} />
+              <MyPopup station={station} identity={this.props.identity} />
             </Marker>
           );
       }

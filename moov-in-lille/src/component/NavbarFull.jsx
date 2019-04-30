@@ -10,7 +10,6 @@ import {
 import "../App.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
-import itineraire from "../pictures/icone-itineraire.png";
 import favoris from "../pictures/icone-favoris.png";
 
 class NavbarFull extends React.Component {
@@ -20,7 +19,8 @@ class NavbarFull extends React.Component {
     this.state = {
       isOpen: false,
       isRightPanelOpen: false,
-      identity: ""
+      identity: "visiteur",
+      myId: "S'identifier"
     };
     this.onChange = this.onChange.bind(this);
     this.submitForm = this.submitForm.bind(this);
@@ -34,6 +34,9 @@ class NavbarFull extends React.Component {
 
   submitForm(e) {
     e.preventDefault();
+    this.setState({
+      myId: this.state.identity
+    });
     this.props.user(this.state.identity);
   }
 
@@ -74,17 +77,12 @@ class NavbarFull extends React.Component {
                     </button>
                     <br />
                     <label htmlFor="lastname" className="lastname">
-                      S'identifier
+                      {this.state.myId === "S'identifier"
+                        ? this.state.myId
+                        : `Bonjour, ${this.state.myId}`}
                     </label>
                   </div>
                 </form>
-              </NavItem>
-              <NavItem className="iconNav m-2 my-md-0 p-3">
-                <NavLink to="/itineraire" onClick={this.props.clickItinerary}>
-                  <img src={itineraire} alt="Itinéraire" className="iconeiti" />
-                  <br />
-                  Itinéraire
-                </NavLink>
               </NavItem>
               <NavItem className="iconNav m-2 my-md-0 p-3">
                 <NavLink to="/favoris" onClick={this.props.clickFavorites}>
