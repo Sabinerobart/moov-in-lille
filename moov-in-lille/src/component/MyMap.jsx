@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import Markers from "./Markers";
 import Control from "react-leaflet-control";
 import "../App.scss";
+import Routing from "./Routing";
 
 const mapboxTiles =
   "https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZnJlZDc4OTYiLCJhIjoiY2p1YmJ2dnM5MDRkYTN6cW1nZHJoc3pudiJ9.UdKtx13HOR9-Uoej4C5cyw";
@@ -46,7 +47,7 @@ export default class MyMap extends Component {
           stations={this.props.stations}
           setCenter={this.setCenter.bind(this)}
         />
-        <Map center={this.state.center} zoom={this.state.zoomLevel}>
+        <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
           <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
           <Control position="topleft">
             <button
@@ -57,35 +58,24 @@ export default class MyMap extends Component {
               <i className="fas fa-crosshairs" />
             </button>
           </Control>
-          <Markers
-            stations={this.props.stations}
-            setCenter={this.setCenter.bind(this)}
+          <Markers 
+            stations = {this.props.stations}            
+            getCenter={this.getCenter.bind(this)}
+            users = {this.props.users} 
+            identity = {this.props.identity}
           />
-          <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
-             <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
-              <Control position="topleft">
-                <button
-                  onClick={() => this.handleGeoloc()}
-                  className="geoloc-btn"
-                  title="Show me where I am !"
-                >
-                  <i className="fas fa-crosshairs" />
-                </button>
-              </Control>
-              <Markers 
-              stations = {this.props.stations}            
-              getCenter={this.getCenter.bind(this)}
-              users = {this.props.users} 
-              identity = {this.props.identity}
-              />
-              <Circle
-                center={this.state.center}
-                fillColor="#b71332"
-                color="transparent"
-                radius={30}
-              />
-          </Map>
-       </div>
+          <Circle
+            center={this.state.center}
+            fillColor="#b71332"
+            color="transparent"
+            radius={30}
+          />
+          <Routing map={this.map} />
+        </Map>
+      </div>
     );
   }
 }
+
+MyMap.propTypes = {};
+MyMap.defaultProps = {};
