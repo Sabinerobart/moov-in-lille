@@ -291,14 +291,9 @@ body {
   height: 100vh;
 }
 
-.iconeiti {
-  width: 2vw;
-  height: 2vw;
-}
-
+.iconeiti,
 .iconefav {
-  width: 2vw;
-  height: 2vw;
+  width: calc(1.4rem + 0.5vw);
 }
 
 .iconNav {
@@ -383,7 +378,7 @@ input {
 }
 
 .itinaryInput {
-  border: 1px solid rgb(224, 224, 224);
+  border: 1px solid rgb(206, 130, 130);
   background: white;
   font-family: Quicksand;
   padding: 2%;
