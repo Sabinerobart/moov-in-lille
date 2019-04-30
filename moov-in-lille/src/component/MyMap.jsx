@@ -11,7 +11,7 @@ const mapboxTiles =
 const mapboxAttr =
   '&copy; <a href="https://www.mapbox.com/feedback/">Mapbox</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
-export default class MyMap extends Component {
+class MyMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -86,3 +86,5 @@ export default class MyMap extends Component {
 
 MyMap.propTypes = {};
 MyMap.defaultProps = {};
+
+export default MyMap;
