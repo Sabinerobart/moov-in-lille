@@ -55,8 +55,8 @@ const fullBikeMarker = new L.Icon({
 });
 
 class Markers extends Component {
-  getCenter(coord) {
-    this.props.getCenter(coord);
+  setCenter(coord) {
+    this.props.setCenter(coord);
   }
 
   render() {
@@ -72,7 +72,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={redStripedMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>
@@ -83,7 +83,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={redMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>
@@ -94,7 +94,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={orangeMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>
@@ -105,7 +105,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={yellowMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>
@@ -116,7 +116,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={greenMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>
@@ -127,7 +127,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={fullBikeMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>
@@ -138,7 +138,7 @@ class Markers extends Component {
               key={key}
               position={station.fields.geo}
               icon={greyMarker}
-              onClick={() => this.getCenter(station.fields.geo)}
+              onClick={() => this.setCenter(station.fields.geo)}
             >
               <MyPopup station={station} />
             </Marker>

@@ -19,7 +19,7 @@ export default class MyMap extends Component {
     };
   }
 
-  getCenter(coords) {
+  setCenter(coords) {
     this.setState({
       center: coords,
       zoomLevel: 18
@@ -38,20 +38,28 @@ export default class MyMap extends Component {
     });
   }
 
-  getCenter(coord) {
-    this.setState({
-      center: coord,
-      zoomLevel: 17
-    });
-  }
-
   render() {
     const stateClickOnItinerary = this.props.clickItinerary || this.props.clickFavorites ? 'leaflet-container-mid' : 'leaflet-container-full' ;
     return (
-       <div>
-          <SearchBar
+      <div>
+        <SearchBar
+          stations={this.props.stations}
+          setCenter={this.setCenter.bind(this)}
+        />
+        <Map center={this.state.center} zoom={this.state.zoomLevel}>
+          <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
+          <Control position="topleft">
+            <button
+              onClick={() => this.handleGeoloc()}
+              className="geoloc-btn"
+              title="Show me where I am !"
+            >
+              <i className="fas fa-crosshairs" />
+            </button>
+          </Control>
+          <Markers
             stations={this.props.stations}
-            getCenter={this.getCenter.bind(this)}
+            setCenter={this.setCenter.bind(this)}
           />
           <Map center={this.state.center} zoom={this.state.zoomLevel} className={stateClickOnItinerary}>
              <TileLayer attribution={mapboxAttr} url={mapboxTiles} />
