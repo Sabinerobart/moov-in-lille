@@ -1,0 +1,54 @@
+{
+  "utilisateurs": [
+    {
+      "abonne": "alexy",
+      "favoris": [
+        {
+          "emplacement": "Maison",
+          "nom": "RIHOUR"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "abonne": "alexy",
+      "favoris": [
+        {
+          "emplacement": "Travail",
+          "nom": "CITE ADMINISTRATIVE"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "abonne": "alexy",
+      "favoris": [
+        {
+          "emplacement": "aaa",
+          "nom": "GARE LILLE FLANDRES"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "abonne": "frederic",
+      "favoris": [
+        {
+          "emplacement": "Maison",
+          "nom": "PLACE DE STRASBOURG"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "abonne": "sabine",
+      "favoris": [
+        {
+          "emplacement": "maison",
+          "nom": "DELESALLE MEDIATHEQUE"
+        }
+      ],
+      "id": 5
+    }
+  ]
+}
